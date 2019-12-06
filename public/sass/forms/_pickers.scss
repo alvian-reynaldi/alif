@@ -1,0 +1,160 @@
+.datepicker {
+    td,
+    th {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.datepicker-dropdown {
+    padding: .25rem;
+    &.dropdown-menu {
+        right: auto;
+        &:before,
+        &:after {
+            display: none;
+        }
+        .datepicker-months,
+        .datepicker-days {
+            tr {
+                td {
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        background-color: theme-color("primary")!important;
+                        background-image: none;
+                        color: $white-color;
+                        &:hover {
+                            background-color: theme-color("primary")!important;
+                            background-image: none;
+                            color: $white-color;
+                        }
+                    }
+                    &.today {
+                        background: $secondary-background-color;
+                        color: $base-color;
+                    }
+                    &.disabled {
+                        background: none;
+                        color: $portflio-grey-color;
+                        &:hover {
+                            background: none;
+                            color: $portflio-grey-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.datepicker-inline {
+    padding: .25rem;
+    right: auto;
+    &:before,
+    &:after {
+        display: none;
+    }
+    .datepicker-months,
+    .datepicker-days {
+        tr {
+            td {
+                &.active,
+                &:hover,
+                &:focus {
+                    background-color: theme-color("primary")!important;
+                    background-image: none;
+                    color: $white-color;
+                    &:hover {
+                        background-color: theme-color("primary")!important;
+                        background-image: none;
+                        color: $white-color;
+                    }
+                }
+                &.today {
+                    background: $secondary-background-color;
+                    color: $base-color;
+                }
+                &.disabled {
+                    background: none;
+                    color: $portflio-grey-color;
+                    &:hover {
+                        background: none;
+                        color: $portflio-grey-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.daterangepicker{
+    td{
+        &.active{
+            background-color: theme-color("primary");
+            &:hover{
+                background-color: theme-color("primary");
+            }
+        }
+        &.in-range{
+            background: $secondary-background-color;
+            color: $base-color;
+            &.active{
+                background-color: theme-color("primary");
+                color: $white-color;
+            }
+        }
+       &.available{
+           &:hover{
+            background-color: theme-color("primary");
+            color: $white-color;
+           }
+       }
+    }
+    .drp-buttons{
+        .btn{
+            @include font-weight(400);
+        }
+    }
+    select{
+        &.hourselect,&.minuteselect,&.secondselect,&.ampmselect,&.monthselect,&.yearselect{
+            background-color: $secondary-background-color;
+            color: $base-color;
+            border-radius: 0;
+        }
+    }
+    .ranges{
+        li{
+            &.active{
+                background-color: theme-color("primary");
+            }
+        }
+    }
+}
+
+.minicolors-theme-default{
+    .minicolors-swatch{
+        top: 8px;
+        left: 8px;
+        border:none;
+    }
+    .minicolors-input {
+        padding: .438rem .875rem;
+        padding-left: 2.375rem;
+    }
+    &.minicolors, .minicolors-input{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    &.minicolors-position-right {
+        .minicolors-input{
+            padding-right: 2.375rem;
+            padding-left: .875rem;
+        
+        }
+        .minicolors-swatch{
+            right: 8px;
+        }
+    }
+}

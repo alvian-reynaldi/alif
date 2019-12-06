@@ -1,0 +1,296 @@
+.tab-panel {
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .tab-content {
+        padding: 20px;
+        @include border(null, 1px, solid, $nav-tabs-border-color);
+        flex: 1;
+    }
+    .nav-left {
+        .nav-link {
+            padding: 7px 13px;
+            &.active {
+                background: $main-background;
+            }
+        }
+    }
+}
+
+.nav {
+    &.bedges-tabs {
+        .active {
+            &.primary {
+                background: none;
+            }
+            &.success {
+                color: $green;
+                border-color: $green;
+            }
+            &.warning {
+                color: $orange;
+                border-color: $orange;
+            }
+            &.danger {
+                color: $red;
+                border-color: $red;
+            }
+        }
+    }
+    &.nav-stacked {
+        flex-wrap: wrap;
+        &.nav-tabs {
+            border-bottom: none;
+        }
+        li {
+            display: block;
+            @include border(bottom, 1px, solid, $nav-tabs-border-color);
+            width: 100%;
+            .active {
+                border: none;
+            }
+            &:last-child {
+                border-bottom: none
+            }
+            a:hover {
+                border: none;
+            }
+            a {
+                border: none;
+            }
+        }
+    }
+}
+
+.line-tabs {
+    @include border(bottom, 2px, solid, transparent);
+    .nav-item {
+        margin: 0;
+    }
+    .nav-link {
+        border: none;
+        margin-bottom: -2px;
+        padding: 0.6em 1em;
+        &.active {
+            @include border(bottom, 2px, solid, $blue);
+        }
+    }
+    &.bedges-tabs {
+        .nav-link {
+            .active {
+                background: none;
+                &.primary {
+                    color: $active-nav-color;
+                    border-color: $active-nav-color;
+                }
+                &.success {
+                    color: $green;
+                    border-color: $green;
+                }
+                &.warning {
+                    color: $orange;
+                    border-color: $orange;
+                }
+                &.danger {
+                    color: $red;
+                    border-color: $red;
+                }
+            }
+        }
+    }
+}
+
+.filled-tabs {
+    @include border(bottom, 2px, solid, $nav-tabs-border-color);
+    .nav-item {
+        margin: 0;
+        .nav-link {
+            border: none;
+            margin-bottom: -2px;
+            margin-right: 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            &.active {
+                @include border(bottom, 2px, solid, $active-nav-color);
+                background: $active-nav-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.small-tab {
+    .nav-item {
+        .nav-link {
+            padding: 0.3em 0.6em;
+            font-size: 85%;
+        }
+    }
+}
+
+.large-tab {
+    .nav-item {
+        .nav-link {
+            padding: 0.6rem 1rem;
+            font-size: 125%;
+        }
+    }
+}
+
+.nav-left {
+    .tab-content {
+        border: none;
+        background: $main-background;
+    }
+}
+
+.menu-link {
+    .nav-item {
+        margin-bottom: -2px;
+    }
+}
+
+.nav {
+    &.success-tabs {
+        .nav-link {
+            &.active,
+            &:focus {
+                border-color: $green;
+                color: $green;
+            }
+        }
+    }
+    &.primary-tabs {
+        .nav-link {
+            &.active,
+            &:focus {
+                border-color: $active-nav-color;
+                color: $active-nav-color;
+            }
+        }
+    }
+    &.danger-tabs {
+        .nav-link {
+            &.active,
+            &:focus {
+                border-color: $red;
+                color: $red;
+            }
+        }
+    }
+    &.warning-tabs {
+        .nav-link {
+            &.active,
+            &:focus {
+                border-color: $yellow;
+                color: $yellow;
+            }
+        }
+    }
+}
+
+.tab-panel {
+.success-tab{
+    .nav-link{
+        color: theme-color('success');
+        background: none;
+        &.active{
+            background: theme-color('success');
+            color: $white-color;
+        }
+    }
+}
+.danger-tab{
+    .nav-link{
+        color: theme-color('danger');
+        background: none;
+        &.active{
+            background: theme-color('danger');
+            color: $white-color;
+        }
+    }
+}
+}
+
+.success-tab{
+    .nav-link{
+        &.active,&:hover{
+            background: theme-color('success');
+            color: $white-color;
+        }
+    }
+    .show{
+        & > .nav-link{
+            background: theme-color('success');
+        }
+    }
+}
+
+.danger-tab{
+    .nav-link{
+        &.active,&:hover{
+            background: theme-color('danger');
+            color: $white-color;
+        }
+    }
+    .show{
+        & > .nav-link{
+            background: theme-color('danger');
+        }
+    }
+}
+
+.info-tab{
+    .nav-link{
+        &.active,&:hover{
+            background: theme-color('info');
+            color: $white-color;
+        }
+    }
+    .show{
+        & > .nav-link{
+            background: theme-color('info');
+        }
+    }
+}
+
+.warning-tab{
+    .nav-link{
+        &.active,&:hover{
+            background: theme-color('warning');
+            color: $white-color;
+        }
+    }
+    .show{
+        & > .nav-link{
+            background: theme-color('warning');
+        }
+    }
+}
+
+.nav-pills {
+    .nav-link {
+        &.active {
+            &.primary {
+                background-color: theme-color('primary');
+            }
+            &.success {
+                background-color: theme-color('success');
+            }
+            &.warning {
+                background-color: theme-color('warning');
+            }
+            &.danger {
+                background-color: theme-color('danger');
+            }
+        }
+    }
+    .nav-item {
+        &.show {
+            .nav-link {
+                background-color: $active-nav-color;
+            }
+        }
+    }
+}
+

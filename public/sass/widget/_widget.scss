@@ -1,0 +1,141 @@
+.add-items {
+    input{
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-right: none;
+    }
+    .add{
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+.bullet-line-list {
+    padding-left: 30px;
+    margin-bottom: 0;
+    position: relative;
+    list-style-type: none;
+    li {
+        position: relative;
+        line-height: 1;
+        padding-bottom: 30px;
+        &:before {
+            content: "";
+            border-radius: 100%;
+            @include position(absolute, 13px, null, null, -28px);
+            width: 12px;
+            height: 12px;
+            margin-right: 15px;
+            z-index: 2;
+            background: $white-color;
+            @include border(null, 3px, solid, theme-color('primary'));
+        }
+        &:first-child {
+            &:after {
+                content: "";
+                height: 80%;
+            }
+        }
+        &:after {
+            content: "";
+            @include position(absolute, null, null, 0, -23px);
+            height: 100%;
+            @include border(null, 1px, solid, $popover-brd-color);
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+}
+.preview-list{
+    .preview-item{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+        .preview-item-content {
+            line-height: 1;
+            padding-left: 15px;
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.pignose-calendar{
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    .pignose-calendar-top{
+        border: none;
+        box-shadow: none;
+        background: #fff;
+    }
+    .pignose-calendar-unit{
+        a{
+            color: $info-background-color
+        }
+        &.pignose-calendar-unit-sat, &.pignose-calendar-unit-sun{
+            a{
+                color: $danger-background-color
+            }
+            &.pignose-calendar-unit-active{
+                a{
+                    background: $danger-background-color;
+                    box-shadow: none;
+                }
+            }
+        }
+        &.pignose-calendar-unit-active{
+            a{
+                background: $info-background-color;
+                box-shadow: none;
+            }
+        }
+    }
+    .pignose-calendar-header{
+        .pignose-calendar-week{
+            &.pignose-calendar-week-sat,&.pignose-calendar-week-sun{
+                color: $danger-background-color
+            }
+        }
+    }
+}
+.calendar3{
+    .pignose-calendar-top{
+        .pignose-calendar-top-year{
+            color: $base-color;
+        }
+    }
+    .pignose-calendar-unit{
+        a{
+            color: $base-color;
+        }
+        &.pignose-calendar-unit-sat, &.pignose-calendar-unit-sun{
+            a{
+                color: $base-color;
+            }
+            &.pignose-calendar-unit-active{
+                a{
+                    background: $danger-background-color;
+                    color: $white-color;
+                }
+            }
+        }
+        &.pignose-calendar-unit-active{
+            a{
+                background: $danger-background-color;
+                color: $white-color;
+            }
+        }
+    }
+    .pignose-calendar-header{
+        .pignose-calendar-week{
+            &.pignose-calendar-week-sat,&.pignose-calendar-week-sun{
+                color: $base-color;
+            }
+        }
+    }
+}

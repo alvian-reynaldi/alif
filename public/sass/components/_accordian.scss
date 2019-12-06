@@ -1,0 +1,251 @@
+.accordion {
+    .section-heading {
+        padding: 10px 15px;
+    }
+    .card {
+        border-color: $popover-brd-color;
+        margin-bottom: 15px;
+        .card-header {
+            background: transparent;
+            padding: 0;
+            border: none;
+            .accordion-toggle {
+                color: $accordian-link-color;
+                background-color: $white-color;
+                display: block;
+                padding: 1rem 2rem 1rem 1.5rem;
+                @include font-weight(600);
+                position: relative;
+                &:after {
+                    @include position(absolute, 0, 0, 0, null, null);
+                    content: "\F374";
+                    font-family: $material-font-family;
+                    @include font-weight(600);
+                    width: 20px;
+                    height: 20px;
+                    margin: auto;
+                }
+                &.collapsed {
+                    background-color: $light-background-inverse-color;
+                    &:after {
+                        content: "\F415";
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 1rem 2rem 1rem 1.5rem;
+        }
+        &:first-of-type,
+        &:last-of-type {
+            @include border(bottom, 1px, solid, $popover-brd-color);
+        }
+        &:not(:first-of-type):not(:last-of-type) {
+            @include border(bottom, 1px, solid, $popover-brd-color)
+        }
+    }
+}
+
+.accordian-outline {
+    .card {
+        border-color: $info-background-color;
+        margin-bottom: 15px;
+        .card-header {
+            background: transparent;
+            padding: 0;
+            border-bottom: none;
+            a {
+                color: $info-background-color;
+                background-color: transparent;
+                display: block;
+                padding: 1rem 2rem 1rem 1.5rem;
+                @include font-weight(600);
+                position: relative;
+                &:after {
+                    @include position(absolute, 0, 0, 0, null, null);
+                    content: "\F374";
+                    font-family: $material-font-family;
+                    @include font-weight(600);
+                    width: 20px;
+                    height: 20px;
+                    margin: auto;
+                }
+                &.collapsed {
+                    &:after {
+                        content: "\F415";
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 1rem 2rem 1rem 1.5rem;
+            @include border(top, 1px, solid, $info-background-color);
+        }
+        &:first-of-type,
+        &:last-of-type {
+            @include border(bottom, 1px, solid, $info-background-color);
+        }
+        &:not(:first-of-type):not(:last-of-type) {
+            @include border(bottom, 1px, solid, $info-background-color)
+        }
+    }
+    &.v2 {
+        .card {
+            &:nth-child(n+1) {
+                @include accordian-outline-nth-child($info-background-color);
+            }
+            &:nth-child(n+2) {
+                @include accordian-outline-nth-child($active-nav-color);
+            }
+            &:nth-child(n+3) {
+                @include accordian-outline-nth-child($danger-background-color);
+            }
+            &:nth-child(n+4) {
+                @include accordian-outline-nth-child($success-background-color);
+            }
+            &:nth-child(n+5) {
+                @include accordian-outline-nth-child($warning-background-color);
+            }
+            &:nth-child(n+6) {
+                @include accordian-outline-nth-child($dark-background-color);
+            }
+        }
+    }
+}
+
+.accordian-filled {
+    .card {
+        border-color: $info-background-color;
+        margin-bottom: 15px;
+        .card-header {
+            background: transparent;
+            padding: 0;
+            border-bottom: none;
+            a {
+                color: $white-color;
+                background-color: $info-background-color;
+                display: block;
+                padding: 1rem 1.5rem 1rem 2rem;
+                @include font-weight(600);
+                position: relative;
+                &:before {
+                    @include position(absolute, 0, null, 0, 5px, null);
+                    content: "\F143";
+                    font-family: $material-font-family;
+                    @include font-weight(600);
+                    width: 20px;
+                    height: 30px;
+                    margin: auto;
+                    font-size: 20px;
+                }
+                &.collapsed {
+                    &:before {
+                        content: "\F140";
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 1rem 1.5rem 1rem 2rem;
+            @include border(top, 1px, solid, $info-background-color);
+        }
+        &:first-of-type,
+        &:last-of-type {
+            @include border(bottom, 1px, solid, $info-background-color);
+        }
+        &:not(:first-of-type):not(:last-of-type) {
+            @include border(bottom, 1px, solid, $info-background-color);
+        }
+    }
+    &.v2 {
+        .card {
+            &:nth-child(n+1) {
+                @include accordian-filled-nth-child($info-background-color);
+            }
+            &:nth-child(n+2) {
+                @include accordian-filled-nth-child($success-background-color);
+            }
+            &:nth-child(n+3) {
+                @include accordian-filled-nth-child($active-nav-color);
+            }
+            &:nth-child(n+4) {
+                @include accordian-filled-nth-child($danger-background-color);
+            }
+            &:nth-child(n+5) {
+                @include accordian-filled-nth-child($warning-background-color);
+            }
+            &:nth-child(n+6) {
+                @include accordian-filled-nth-child($dark-background-color);
+            }
+        }
+    }
+}
+
+.accordian-shadow {
+    .card {
+        border-color: $info-background-color;
+        margin-bottom: 15px;
+        .card-header {
+            background: transparent;
+            padding: 0;
+            border-bottom: none;
+            a {
+                color: $white-color;
+                background-color: $info-background-color;
+                display: block;
+                padding: 1rem 1.5rem 1rem 2rem;
+                @include font-weight(600);
+                position: relative;
+                &:before {
+                    @include position(absolute, 0, null, 0, 5px, null);
+                    content: "\F143";
+                    font-family: $material-font-family;
+                    @include font-weight(600);
+                    width: 20px;
+                    height: 30px;
+                    margin: auto;
+                    font-size: 20px;
+                }
+                &.collapsed {
+                    &:before {
+                        content: "\F140";
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 1rem 1.5rem 1rem 2rem;
+            @include border(top, 1px, solid, $info-background-color);
+        }
+        &:first-of-type,
+        &:last-of-type {
+            @include border(bottom, 1px, solid, $info-background-color);
+        }
+        &:not(:first-of-type):not(:last-of-type) {
+            @include border(bottom, 1px, solid, $info-background-color);
+        }
+    }
+    &.v2 {
+        .card {
+            &:nth-child(n+1) {
+                @include accordian-shadow-nth-child($info-background-color);
+            }
+            &:nth-child(n+2) {
+                @include accordian-shadow-nth-child($success-background-color);
+            }
+            &:nth-child(n+3) {
+                @include accordian-shadow-nth-child($active-nav-color);
+            }
+            &:nth-child(n+4) {
+                @include accordian-shadow-nth-child($danger-background-color);
+            }
+            &:nth-child(n+5) {
+                @include accordian-shadow-nth-child($warning-background-color);
+            }
+            &:nth-child(n+5) {
+                @include accordian-shadow-nth-child($dark-background-color);
+            }
+        }
+    }
+}
+

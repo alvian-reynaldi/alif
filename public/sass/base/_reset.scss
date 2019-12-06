@@ -1,0 +1,249 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    color: $base-color;
+    background:$main-background;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+li,
+ol,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+dt {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+li {
+    line-height: 1.8;
+}
+
+p {
+    padding: 0;
+}
+
+a:active {
+    text-decoration: none;
+    color: $base-color;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0b77d2;
+}
+
+.nav-link:hover {
+    color: $active-nav-color;
+}
+
+a:focus {
+    text-decoration: none;
+    color: $active-nav-color;
+    outline: none;
+}
+
+b,
+strong {
+    @include font-weight(700);
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: $nav-color;
+}
+
+.nav-link {
+    padding: 7px 13px;
+    &.active {
+        color: $active-nav-color;
+    }
+}
+
+.nav-tabs {
+    .nav-link {
+        &.active {
+            color: $active-nav-color;
+        }
+    }
+}
+
+
+.blockquote-footer {
+    font-size: 60%
+}
+
+.no-padding {
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.note-editor.note-frame {
+    z-index: 1;
+    .card-header {
+        background: $white-color;
+    }
+    .note-btn {
+        background: $white-color;
+        @include border(null, 1px, solid, $active-nav-color);
+        padding: 5px 10px;
+        line-height: 1.5;
+        font-size: px-rem($f12);
+        border-radius: 0;
+        color: inherit;
+    }
+}
+
+.dropdown-menu {
+    min-width: 150px;
+    border-radius: 3px;
+    left: auto;
+    right: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
+    background: $white-color;
+    padding: 10px 0;
+    border: none;
+    .dropdown-heading {
+        padding: 16px 30px;
+        @include font-weight(600);
+        @include text-transform(uppercase);
+        @include text-align(center);
+        @include border(bottom, 1px, solid, $dropdown-heading-brd-color);
+        color: $heading-color;
+    }
+    li {
+        @include common;
+        margin: 0;
+        &.see-all {
+            @include font-weight(600);
+            @include text-align(center);
+            a {
+                color: $base-color;
+                display: block;
+                @include text-align(center);
+                padding: 10px 30px;
+                &:hover,
+                &:focus {
+                    background: $dropdown-hover-background;
+                    color: $base-color;
+                }
+            }
+        }
+        a {
+            display: block;
+            color: $base-color;
+            &:hover,
+            &:focus {
+                background: $dropdown-hover-background;
+                color: $base-color;
+            }
+        }
+    }
+    a {
+        color: $base-color;
+        &.dropdown-item {
+            padding: 9px 15px;
+            &:hover,
+            &:focus,
+            &.active {
+                background: $dropdown-hover-background;
+                color: $base-color;
+            }
+        }
+    }
+}
+
+header,
+main,
+footer {
+    padding-left: 0;
+}
+
+.ct-label {
+    color: $white-color;
+    fill: $white-color;
+}
+
+.alert-dismissible {
+    .close {
+        font-size: px-rem($f26);
+        font-weight: 400;
+        padding: 0.49rem 1.25rem;
+    }
+}
+
+.form-control {
+    padding: .438rem .875rem;
+    line-height: 1.6;
+    color: $base-color;
+    @include font-weight(300);
+}
+
+.card-footer{
+    background-color: transparent;
+}
+
+.card-header{
+    background-color: transparent;
+}
+
+.popover{
+    border: none;
+}
+
+.morris-hover{
+    z-index: 900;
+}

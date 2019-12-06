@@ -1,0 +1,66 @@
+
+.auth-container-2 {
+    min-height: 100vh;
+    padding: 110px 5% 5%;
+    .nav-get-started {
+        @include position(absolute, 30px, 30px, null, null);
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .get-started-btn {
+        @include border(null, 1px, solid, $popover-border-color);
+        padding: 10px 20px;
+        font-size: px-rem($f12);
+        @include font-weight(600);
+        color: $black-color;
+        margin-left: 20px;
+        @include border-radius(50px);
+    }
+}
+.banner-section{
+    background: url(../../assets/images/office-1280.jpg);
+    .slide-content{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        height: 100%;
+        @media only screen and (max-width:767px) {
+            padding: 150px 0;
+        }
+    }
+}
+
+.auth-form-2 {
+    width: 480px;
+    .form-control {
+        border-left: none;
+        &:focus {
+            border-color: $accordian-border-color;
+        }
+    }
+    .input-group-append {
+        margin-left: 0;
+        .input-group-text {
+            border-left: none;
+        }
+    }   
+    .auth-footer {
+        li {
+            padding-right: 10px;
+            margin-right: 10px;
+            line-height: 1;
+            @include border(right, 1px, solid, $mail-para-color);
+            a{
+                color: $mail-para-color;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}

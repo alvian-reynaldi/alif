@@ -1,0 +1,35 @@
+#growl-container{
+    @include position(fixed, 100px, 10px, null, null);
+    width:220px;
+    color: $white-color; 
+    .growl{
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+        padding: 10px; 
+        border-radius: 4px;
+        &.gone{
+            opacity: 0;
+            @include transition-cubic(all, 1s,ease-in-out);
+        }
+    }
+    .growl-close{
+        float: right;
+        cursor: pointer;
+        font-size: px-rem($f26);
+        line-height: 1.5rem;
+    }
+    .growl-title{
+        float: left;
+    }
+    .growl-message{
+        width: 100%;
+        float: left;
+    }
+    .bg-warning{
+        color: $gray-800;
+    }
+    .bg-default{
+        background: $default-color;
+    }
+}

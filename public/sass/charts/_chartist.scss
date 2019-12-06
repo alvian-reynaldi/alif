@@ -1,0 +1,118 @@
+.ct-grids {
+    stroke: rgba(0, 0, 0, .2);
+    stroke-width: 1px;
+    stroke-dasharray: 2px;
+}
+
+.ct-series-a {
+    .ct-line,
+    .ct-point {
+        stroke: theme-color('success');
+    }
+    .ct-area {
+        opacity: 0.1;
+        fill: theme-color('success');
+    }
+}
+
+.ct-series-b {
+    .ct-area {
+        fill: theme-color('primary');
+        fill-opacity: 0.1;
+    }
+    .ct-line,
+    .ct-point {
+        stroke: theme-color('primary');
+    }
+}
+
+.ct-label {
+    color: $base-color;
+    fill: $base-color;
+}
+
+.ct-series-a {
+    .ct-bar {
+        stroke: $active-nav-color;
+    }
+    .ct-slice-pie{
+        fill: theme-color('primary');
+        fill-opacity: 0.7;
+    }
+    .ct-bar, .ct-line, .ct-point, .ct-slice-donut{
+        stroke: theme-color('primary');
+    }
+    .ct-area, .ct-slice-donut-solid, .ct-slice-pie{
+        fill: theme-color('primary');
+        fill-opacity: 0.7;
+    }
+}
+
+.ct-series-b {
+    .ct-bar {
+        stroke: $success-background-color;
+    }
+    .ct-slice-pie{
+        fill: theme-color('success');
+        fill-opacity: 0.7;
+    }
+    .ct-bar, .ct-line, .ct-point, .ct-slice-donut{
+        stroke: theme-color('success');
+    }
+    .ct-area, .ct-slice-donut-solid, .ct-slice-pie{
+        fill: theme-color('success');
+        fill-opacity: 0.7;
+    }
+}
+
+.ct-series-c{
+    .ct-line, .ct-point{
+        stroke: theme-color('info');
+    }
+    .ct-slice-pie{
+        fill: theme-color('info');
+        fill-opacity: 0.7;
+    }
+    .ct-bar, .ct-line, .ct-point, .ct-slice-donut{
+        stroke: theme-color('info');
+    }
+    .ct-area, .ct-slice-donut-solid, .ct-slice-pie{
+        fill: theme-color('info');
+        fill-opacity: 0.7;
+    }
+}
+
+.ct-series-d {
+    .ct-line, .ct-point{
+        stroke: $danger-background-color;
+    }
+    .ct-slice-pie{
+        fill: theme-color('danger');
+        fill-opacity: 0.7;
+    }
+    .ct-bar, .ct-line, .ct-point, .ct-slice-donut{
+        stroke: theme-color('danger');
+    }
+    .ct-area, .ct-slice-donut-solid, .ct-slice-pie{
+        fill: theme-color('danger');
+        fill-opacity: 0.7;
+    }
+}
+
+.ct-series-e {
+    .ct-line, .ct-point{
+        stroke: $warning-background-color;
+    }
+    .ct-slice-pie{
+        fill: theme-color('warning');
+        fill-opacity: 0.7;
+    }
+    .ct-bar, .ct-line, .ct-point, .ct-slice-donut{
+        stroke: theme-color('warning');
+    }
+    .ct-area, .ct-slice-donut-solid, .ct-slice-pie{
+        fill: theme-color('warning');
+        fill-opacity: 0.7;
+    }
+}
+

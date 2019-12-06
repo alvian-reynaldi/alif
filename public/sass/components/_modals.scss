@@ -1,0 +1,52 @@
+.modal{
+    &.modal-default{
+        @include transform(translateY(150px) scale(0.8));
+        @include transition(all,0.25s);
+        &.show{
+            @include transform(translateY(0) scale(1));
+            @include transition(all,0.25s);
+        }
+    }
+    &.modal-slide{
+        &.show{
+            .modal-dialog{
+                @include transform(translateX(0));
+                @include transition(all,0.25s);
+                z-index: 9999;
+            }
+        } 
+        .modal-dialog{
+            @include position(fixed,0,0,0,null);
+            margin: 0;
+            @include transform(translateX(100%));
+            @include transition(all,0.25s);
+            &.modal-md{
+                max-width: 400px;
+            }
+        }
+        .modal-content{
+            padding:1.5rem 0;
+            height:100%;
+            border-radius: 0;
+            border:none;
+        }
+        .close{
+            position: absolute;
+            right: 1rem;
+            top: 2rem;
+            text-align: right;
+            @media only screen and (max-width:767px){
+                top: 5px;
+            }
+        }
+        .modal-body{
+            margin: auto 0;
+            flex-grow: 0;
+        }
+    }
+    &.transparent{
+        .modal-body{
+            background: transparent;
+        }
+    }
+}

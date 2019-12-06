@@ -1,0 +1,32 @@
+.auth-container {
+    min-height: 100vh;
+}
+
+.auth-form {
+    background: $white-color;
+    padding: 40px 40px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 37.7px 11.3px rgba(8, 143, 220, 0.07);
+    @media only screen and (max-width: 359px){
+        padding: 40px 20px 10px;
+    }
+    .g-login {
+        @include border(null, 1px, solid, $popover-border-color);
+        padding: 13px;
+        font-size: px-rem($f12);
+        @include font-weight(600);
+        background: transparent;
+    }
+    .form-control {
+        border-right: none;
+        &:focus {
+            border-color: $accordian-border-color;
+        }
+    }
+    .input-group-append {
+        margin-left: 0;
+        .input-group-text {
+            border-left: none;
+        }
+    }
+}

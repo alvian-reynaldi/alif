@@ -1,0 +1,122 @@
+.context-menu-icon {
+    &:before {
+        color: #000;
+        font: normal normal normal 15px/1 $material-font-family;
+    }
+    &.context-menu-icon-copy {
+        &:before {
+            content: '\F18F';
+        }
+    }
+    &.context-menu-icon-edit {
+        &:before {
+            content: '\F3EF';
+        }
+    }
+    &.context-menu-icon-cut {
+        &:before {
+            content: '\F190';
+        }
+    }
+    &.context-menu-icon-paste {
+        &:before {
+            content: '\F613';
+        }
+    }
+    &.context-menu-icon-delete {
+        &:before {
+            content: '\F6CB';
+        }
+    }
+    &.context-menu-icon-quit {
+        &:before {
+            content: '\F156';
+        }
+    }
+}
+
+.context-menu-list {
+    box-shadow: none;
+    @include border(null, 1px, solid, $popover-brd-color);
+}
+
+.context-menu-item {
+    padding: 0.45em 2em;
+    &.context-menu-hover {
+        background-color: $base-color;
+        color: $white-color;
+    }
+}
+
+.card-info {
+    background: $info-card-bg-color;
+    @include border(null, 1px, solid, $info-card-brd-color);
+    color: $info-card-color;
+}
+
+.card-success {
+    background: $success-card-bg-color;
+    @include border(null, 1px, solid, $success-card-brd-color);
+    color: $success-card-color;
+}
+
+.card-warning {
+    background: $warning-card-bg-color;
+    @include border(null, 1px, solid, $warning-card-brd-color);
+    color: $warning-card-color;
+}
+
+.card-danger {
+    background: $danger-card-bg-color;
+    @include border(null, 1px, solid, $danger-card-brd-color);
+    color: $danger-card-color;
+}
+
+.card-primary {
+    background: $primary-card-bg-color;
+    @include border(null, 1px, solid, $primary-card-brd-color);
+    color: $primary-card-color;
+}
+
+.card {
+    @include border(null, 1px, solid, $card-brd-color);
+    box-shadow: 0 0.75rem 1.5rem $card-box-shadow-color;
+    border-radius: 3px;
+}
+
+.card {
+    .card-body {
+        padding: 2.5rem 1.81rem;
+    }
+    .card-title{color: $heading-color;}
+}
+.card-inverse-secondary {
+    background: $card-inverse-bg;
+    @include border(null, 1px, solid, $card-inverse-brd-color);
+    color: $card-inverse-color;
+}
+.card-inverse-info {
+    background: $info-card-bg-color;
+    @include border(null, 1px, solid, $info-card-brd-color);
+    color: $info-card-color;
+}
+.card-inverse-warning {
+    background: $warning-card-bg-color;
+    @include border(null, 1px, solid, $warning-card-brd-color);
+    color: $warning-card-color;
+}
+.card-inverse-danger {
+    background: $danger-card-bg-color;
+    @include border(null, 1px, solid, $danger-card-brd-color);
+    color: $danger-card-color;
+}
+.card-inverse-success {
+    background: $success-card-bg-color;
+    @include border(null, 1px, solid, $success-card-brd-color);
+    color: $success-card-color;
+}
+.card-inverse-primary {
+    background: $primary-card-bg-color;
+    @include border(null, 1px, solid, $primary-card-brd-color);
+    color: $primary-card-color;
+}

@@ -1,0 +1,306 @@
+@import 'variables';
+@mixin position($pos, $top:null, $right:null, $bottom:null, $left:null, $index:null) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    z-index: $index
+}
+
+@mixin border($direction, $width, $style, $color) {
+    @if($direction==left) {
+        border-left: $width $style $color;
+    }
+    @else if($direction==right) {
+        border-right: $width $style $color;
+    }
+    @else if($direction==top) {
+        border-top: $width $style $color;
+    }
+    @else if($direction==bottom) {
+        border-bottom: $width $style $color;
+    }
+    @else {
+        border: $width $style $color;
+    }
+}
+
+@mixin common {
+    float: left;
+    width: 100%;
+}
+
+@mixin display-block {
+    display: inline-block;
+    width: 100%;
+}
+
+@mixin display-flex {
+    display: flex;
+    -webkit-display: flex;
+}
+
+@mixin text-align($param) {
+    text-align: $param
+}
+
+@mixin font-weight($weight) {
+    font-weight: $weight;
+}
+
+@mixin hide-element {
+    display: none;
+}
+
+@mixin show-element {
+    display: block;
+}
+
+@mixin text-transform($fontCase) {
+    text-transform: $fontCase;
+}
+
+@mixin text-decoration {
+    text-decoration: underline;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
+@mixin transition($attr, $time) {
+    transition: $attr $time;
+    -webkit-transition: $attr $time;
+    -ms-transition: $attr $time;
+    -moz-transition: $attr $time;
+}
+
+@mixin transition-cubic($attr, $time, $animationType) {
+    transition: $attr $time $animationType;
+    -webkit-transition: $attr $time $animationType;
+    -ms-transition: $attr $time $animationType;
+    -moz-transition: $attr $time $animationType;
+}
+
+@mixin keyframes($animationName, $animationDuration) {
+    animation-name: $animationName;
+    -webkit-animation-name: $animationName;
+    animation-duration: $animationDuration;
+    -webkit-animation-duration: $animationDuration;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@mixin common-shadow {
+    box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+@mixin drop-down-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+@mixin icon-shadow($class, $shadow1, $shadow2, $shadow3) {
+    #{$class} {
+        box-shadow: $shadow1, $shadow2;
+        &:hover {
+            box-shadow: $shadow1, $shadow2, $shadow3;
+            @include transitionCubic(all, 0.5s, cubic-bezier(.165, .84, .44, 0.5))
+        }
+    }
+}
+
+@mixin calcFn($type, $totalWidth, $width) {
+    #{$type}:calc(#{$totalWidth} - #{$width});
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@function px-rem($fontSize) {
+    @return $fontSize/$rem-size+rem;
+}
+
+@function calcFn($first, $second) {
+    @return calc(#{$first} - #{$second});
+}
+
+@mixin tooltip($color) {
+    .tooltip-inner {
+        background: $color;
+    }
+    &.bs-tooltip-top {
+        .arrow {
+            &:before {
+                border-top-color: $color;
+            }
+        }
+    }
+    &.bs-tooltip-bottom {
+        .arrow {
+            &:before {
+                border-bottom-color: $color;
+            }
+        }
+    }
+    &.bs-tooltip-left {
+        .arrow {
+            &:before {
+                border-left-color: $color
+            }
+        }
+    }
+    &.bs-tooltip-right {
+        .arrow {
+            &:before {
+                border-right-color: $color;
+            }
+        }
+    }
+}
+
+@mixin popover($bgcolor) {
+    &.bs-popover-top {
+        .arrow {
+            &:before {
+                border-top-color: $bgcolor;
+            }
+            &:after {
+                border-top-color: $bgcolor;
+            }
+        }
+    }
+    &.bs-popover-bottom {
+        .arrow {
+            &:before {
+                border-bottom-color: $bgcolor;
+            }
+            &:after {
+                border-bottom-color: $bgcolor;
+            }
+        }
+    }
+    &.bs-popover-left {
+        .arrow {
+            &:before {
+                border-left-color: $bgcolor;
+            }
+            &:after {
+                border-left-color: $bgcolor;
+            }
+        }
+    }
+    &.bs-popover-right {
+        .arrow {
+            &:before {
+                border-right-color: $bgcolor;
+            }
+            &:after {
+                border-right-color: $bgcolor;
+            }
+        }
+    }
+}
+
+@mixin perspective($val) {
+    -webkit-perspective: $val;
+    -moz-perspective: $val;
+    -ms-perspective: $val;
+    perspective: $val;
+}
+
+@mixin timeline-badge($class, $color) {
+    .#{$class} {
+        .timeline-badge {
+            background: $color;
+        }
+        .timeline-panel {
+            &:before {
+                background: $color;
+            }
+        }
+    }
+}
+
+@mixin backface-visibility($val) {
+    -webkit-backface-visibility: $val;
+    backface-visibility: $val;
+}
+
+@mixin accordian-outline-nth-child($val) {
+    border-color: $val;
+    .card-header {
+        a {
+            color: $val;
+        }
+    }
+    .card-body {
+        @include border(top, 1px, solid, $val);
+    }
+    &:first-of-type,
+    &:last-of-type {
+        @include border(bottom, 1px, solid, $val);
+    }
+    &:not(:first-of-type):not(:last-of-type) {
+        @include border(bottom, 1px, solid, $val)
+    }
+}
+
+@mixin accordian-filled-nth-child($val) {
+    border-color: $val;
+    .card-header {
+        a {
+            color: $white-color;
+            background-color: $val;
+        }
+    }
+    .card-body {
+        @include border(top, 1px, solid, $val);
+    }
+    &:first-of-type,
+    &:last-of-type {
+        @include border(bottom, 1px, solid, $val);
+    }
+    &:not(:first-of-type):not(:last-of-type) {
+        @include border(bottom, 1px, solid, $val)
+    }
+}
+
+@mixin accordian-shadow-nth-child($val) {
+    border-color: $val;
+    .card-header {
+        a {
+            color: $white-color;
+            background-color: $val;
+        }
+    }
+    .card-body {
+        @include border(top, 1px, solid, $val);
+    }
+    &:first-of-type,
+    &:last-of-type {
+        @include border(bottom, 1px, solid, $val);
+    }
+    &:not(:first-of-type):not(:last-of-type) {
+        @include border(bottom, 1px, solid, $val)
+    }
+}
+
+@mixin btn-outline-badge($val){
+    .badge {
+        background-color: $val;
+        color: $white-color;
+    }
+    &:hover {
+        .badge {
+            background-color: $white-color;
+            color: $val;
+        }
+    }
+}
+

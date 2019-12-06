@@ -1,0 +1,50 @@
+.owl-carousel.basic{
+    .owl-nav {
+        width: 100%;
+        .owl-prev,
+        .owl-next {
+            @include position(absolute, -20px, null, 0, null, null);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            @include border-radius(100%);
+            margin: auto 0;
+            color: $white-color;
+            i {
+                &:before {
+                    font-size: 1.6rem;
+                    @include font-weight(700);
+                    line-height: 40px;
+                }
+            }
+        }
+        .owl-prev {
+            left: 15px;
+        }
+        .owl-next {
+            right: 15px;
+        }
+    }
+}
+.owl-dots{
+    .owl-dot{
+        &.active{
+          span{
+              background: $base-color !important;
+          }  
+        }
+    }
+}
+.owl-carousel{
+    .text{
+        @include position(absolute,null,0,0,0);
+        padding: 20px;
+        @include text-align(center);
+        color: $white-color;
+    }
+    &.loop,&.noloop{
+        .text{
+            padding-bottom:0;
+        }
+    }
+}

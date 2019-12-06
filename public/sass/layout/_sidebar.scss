@@ -1,0 +1,293 @@
+.main-header {
+    width: $nav-minimum-width;
+    overflow: auto;
+    background: $white-color;
+    @include transition(all, 0.25s);
+    @media only screen and (min-width:991px) and (max-width: 1024px) {
+        width: $smallnav-minimum-width;
+        @include text-align(center);
+        @include transition-cubic(width, 0.2s, ease);
+        overflow: visible;
+    }
+    @media only screen and (max-width:991px){
+        @include position(fixed, $header-height, null, 0, 0, 999);
+        overflow: auto;
+        background: $white-color;
+        @include transform(translateX(-100%));
+        &.active{
+            @include transform(translateX(0)); 
+        }
+    }
+    .navbar-nav {
+        flex-grow: 1;
+        @media only screen and (min-width:991px) and (max-width: 1024px) {
+            width: 100%;
+        }
+        li {
+            @media only screen and (min-width:991px) and (max-width: 1024px) {
+                position: relative;
+                &>.nav-link {
+                    padding: 0 25px;
+                }
+            }
+            .nav-link {
+                line-height: 50px;
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+                @media only screen and (min-width:991px) and (max-width: 1024px) {
+                    padding: 0 18px;
+                }
+            }
+            &.activeRoute {
+                position: relative;
+                &:before {
+                    background: $active-nav-color;
+                    @include position(absolute, 0, null, 0, 0, 1);
+                    content: "";
+                    width: 3px;
+                }
+                &>.nav-link {
+                    color: $active-nav-color;
+                }
+            }
+            &:last-child {
+                .nav-link {
+                    border-bottom: none;
+                }
+            }
+            &.nav-heading {
+                padding: 10px 15px;
+                @include font-weight(600);
+                color: $active-nav-color;
+                @media only screen and (min-width:991px) and (max-width: 1024px) {
+                    @include hide-element;
+                }
+            }
+            .menu-title {
+                @media only screen and (min-width:991px) and (max-width: 1024px) {
+                    @include hide-element;
+                }
+            }
+        }
+    }
+    .sub-menu {
+        padding: 0 15px 11px 62px;
+        display: none;
+        li {
+            .nav-link {
+                padding: 10px 0;
+                border: none;
+                line-height: 18px;
+            }
+        }
+        &.level2 {
+            padding-left: 15px;
+        }
+        &.level2,
+        &.level1 {
+            .activeRoute {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        @media only screen and (min-width:991px) and (max-width: 1024px) {
+            @include position(absolute, 0, null, null, $smallnav-minimum-width, 3);
+            padding: 10px 0;
+            width: $sub-menu-width;
+            background: $white-color;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            li {
+                .nav-link {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+    .nav-item {
+        &.activeRoute {
+            &>.sub-menu {
+                display: block;
+                @media only screen and (min-width:991px) and (max-width: 1024px) {
+                    @include hide-element;
+                }
+            }
+        }
+    }
+}
+
+#wrapper.small-nav {
+    .main-header {
+        width: $smallnav-minimum-width;
+        @include text-align(center);
+        @include transition-cubic(width, 0.2s, ease);
+        overflow: visible;
+        .navbar-nav {
+            width: 100%;
+            li{
+                .nav-link{
+                    padding: 0 18px;
+                }
+            }
+        }
+        .has-submenu {
+            position: relative;
+            &:after {
+                @include hide-element;
+            }
+        } 
+        .sub-menu {
+            @include position(absolute, 0, null, null, $smallnav-minimum-width, 3);
+            padding: 10px 0;
+            background: $white-color;
+            width: $sub-menu-width;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.05);
+            li {
+                .nav-link {
+                    padding: 10px 30px;
+                }
+            }
+        }
+        li {
+            position: relative;
+            &>.nav-link {
+                padding: 0 18px;
+            }
+            &.nav-heading,
+            .menu-title {
+                @include hide-element;
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    .nav-link {
+        &.waves-effect{
+            overflow: hidden;
+        }
+        &.has-submenu {
+            position: relative;
+            &:after {
+                content: '';
+                @include position(absolute, -2px, 25px, 0, null);
+                width: 7px;
+                height: 7px;
+                margin: auto;
+                @include transform(rotate(-45deg));
+                display: block;
+                border-width: 0px 0px 2px 2px;
+                border-style: solid solid;
+                border-top: 0px;
+                border-right: 0px;
+                @include transition(transform, 0.25s);
+                border-radius: 2px;
+            }
+            &.open {
+                &:after {
+                    @include transform(rotate(45deg));
+                }
+            }
+            @media only screen and (min-width:991px) and (max-width:1024px) {
+                display: none;
+                &:after {
+                    @include hide-element;
+                }
+            }
+        }
+    }
+}
+
+.main-header {
+    &.sidebar-dark {
+        background: $sidebar-background;
+        .navbar-nav {
+            li {
+                &.nav-heading {
+                    color: $white-color;
+                }
+                &.activeRoute {
+                    background: transparent;
+                    &:before {
+                        background: $white-color;
+                    }
+                    &>.nav-link,
+                    .active {
+                        color: $white-color;
+                    }
+                }
+                .nav-link {
+                    color: $sidebar-color;
+                    &:hover,
+                    .active {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    &.sidebar-light {
+        background: $sidebar-light-background;
+        .navbar-nav {
+            li {
+                &.nav-heading {
+                    color: $base-color;
+                }
+                &.activeRoute {
+                    background: transparent;
+                    &:before {
+                        background: $info-background-color;
+                    }
+                    &>.nav-link,
+                    .active {
+                        color: $info-background-color;
+                    }
+                }
+                .nav-link {
+                    color: $base-color;
+                    &:hover,
+                    .active {
+                        color: $info-background-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-header {
+    &.bg-primary,
+    &.bg-warning,
+    &.bg-info,
+    &.bg-danger,
+    &.bg-success {
+        .navbar-nav {
+            li {
+                &.nav-heading {
+                    color: $white-color;
+                }
+                &.activeRoute {
+                    background: none;
+                    &:before {
+                        background: $white-color;
+                    }
+                    .nav-link,
+                    .active {
+                        color: $white-color;
+                    }
+                }
+                .nav-link {
+                    color: $white-color;
+                    &:hover,
+                    .active {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}

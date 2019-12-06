@@ -1,0 +1,90 @@
+.open-btn{
+    @include position(absolute, 120px, null, null,0);
+    background: theme-color('primary');
+    color: $white-color;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    line-height: 40px;
+    @include text-align(center);
+    font-size: px-rem($f22);
+    @include transform(translateX(-40px));
+    &:hover, &:focus{
+        color: $white-color;
+    }
+    i{
+        animation: spin 1.5s infinite linear;
+        display: block;
+    }
+}
+
+.close-btn{
+    @include position(absolute, 50%, 0, null,null);
+    display: block;
+    font-size: 20px;
+    @include transform(translateY(-50%));
+    padding: 5px 15px;
+    color: $base-color;
+    font-size: px-rem($f18);
+    &:hover, &:focus{
+        color: theme-color('primary');
+    }
+}
+
+.settings{
+    @include position(fixed, 0, 0, 0,null,9999);
+    width: 230px;
+    background: $white-color;
+    @include transform(translateX(230px));
+    @include transition(transform,0.5s);
+    @media only screen and (max-width:767px){
+        display: none;
+    }
+    .settings-open{
+        opacity: 1;
+        z-index: 2;
+    }
+    &.settings-open{
+        @include transform(translateX(0));
+        @include transition(transform,0.5s);
+        .open-btn{
+            opacity: 0;
+            z-index: -22;
+        }
+    }
+    h6{
+        position: relative;
+        font-size: px-rem($f12);
+        @include font-weight(700);
+        @include text-transform(uppercase);
+    }
+}
+.theme-settings-inner{
+    margin-bottom: 15px;
+    h6{
+        font-size: px-rem($f12);
+    }
+    .colors,.sidebar-colors{
+        li{
+            width:20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+            display: inline-block;
+            cursor: pointer;
+            &.bg-white{
+                @include border(null, 1px, solid, $card-inverse-brd-color);
+            }
+            &.active{
+                @include border(null, 1px, solid, $base-color);
+            }
+            &.sidebar-dark{
+                background: $sidebar-background;
+            }
+            &.sidebar-light{
+                background: $sidebar-light-background;
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+//Base Variables
+$base-font-family: 'Muli', sans-serif;
+$open-font-family:'Open Sans', sans-serif;
+$material-font-family:"Material Design Icons";
+$google-material-fonts: "Material Icons";
+$base-font-weight:400;
+$base-font-size:13px;
+$rem-size:13;
+
+//Nav Width
+$nav-minimum-width: 240px;
+$smallnav-minimum-width : 55px;
+$sub-menu-width: 200px;
+$header-height: 70px;
+
+//Header Color
+$heading-color: #313435;
+$header-background: #fefefe;
+$nav-heading-color: #a9a9a9;
+$nav-color: #72777a;
+$sidebar-background: #0a003a;
+$sidebar-light-background: #c5dec9;
+$sidebar-color: #969c99;
+$sidebar-nav-brand-bolor:#a4ccab;
+$nav-link-hover-bg: rgba(0, 0, 0, 0.0625);
+
+//Dropdown Color
+$dropdown-heading-brd-color:rgba(5, 4, 4, 0.063);
+$dropdown-hover-background:#f9f9f9;
+
+// Font Sizes High to low
+$f52:52;
+$f48:48;
+$f45:45;
+$f39:39;
+$f36:36;
+$f30:30;
+$f26:26;
+$f24:24;
+$f22:22;
+$f18:18;
+$f16:16;
+$f15:15;
+$f14:14;
+$f13:13;
+$f12:12;
+//accordians color
+$accordian-link-color:#242329;
+$accordian-border-color: rgba(0, 0, 0, 0.14);
+$box-brd-color:rgba(0,0,0,.0625);
+
+//Card Color
+$card-box-shadow-color: rgba(242, 242, 242, 0.58);
+$card-brd-color: rgba(242, 242, 242, 0.58);
+$card-inverse-bg: rgba(227, 232, 232, 0.2);
+$card-inverse-color: #adb0b0;
+$card-inverse-brd-color: #d1d5d5;
+
+//Popover Color
+$popover-max-width: 185px;
+$popover-bg: #f2f9ff;
+$popover-brd-color:#f2f2f2;
+
+//Switcher Color
+$switcher-bg-color: rgba(24,28,33,0.1);
+$switcher-color: rgba(24,28,33,0.3);
+
+//MailBox Color
+$mailbox-active-color: #f7f7f9;
+$mailbox-link-color: #303a40;
+$mail-para-color: #777777;
+$attachment-icon-color: #2e383e;
+
+//Form Color
+$form-control-focus-brd-color: #80bdff;
+$form-control-color: #495057;
+$file-upload-bg: rgba(24,28,33,0.015);
+$file-upload-img-err: rgba(217,83,79,0.8);
+
+//Default Color
+$default-color: #4E5155;
+$default-brd-color: rgba(24,28,33,0.1);
+$link-color: #007bff;
+$base-color: #212529;
+$white-color: #ffffff;
+$black-color: #000000;
+$active-nav-color: #269bff;
+$primary-hvr-color: #0089ff;
+$light-dark-grey: #565a5c;
+$dark-text: #343a40;
+$active-nav-background:#fbfbfb;
+$data-table-background:#f0ebfe;
+$main-background:#f9fafb;
+$pagination-link-disabled:#d8d8d8;
+$breadcrumb-brd:rgba(0, 0, 0, 0.125);
+$slider-bg-color: #ebecec;
+$br-widget-bg: #d2d2d2;
+$br-widget-bg-selected: #EDB867;
+$details-col-brd-color: rgba(242, 242, 242, 0.3);
+$portflio-grey-color: #ccc;
+
+//Primary Color
+$primary-background-inverse-color:rgba(38, 155, 255, 0.2);
+$primary-brd-color: #1794ff;
+$primary-card-color: #1d76c2;
+$primary-card-brd-color: #238feb;
+$primary-card-bg-color: rgba(38, 155, 255, 0.2);
+
+//Success Color
+$success-background-color:#0cca8e;
+$success-background-hvr-color:#0aa675;
+$success-background-inverse-color:rgba(12, 202, 142, 0.2);
+$success-brd-color: #0bbc84;
+$success-card-color: #099a6c;
+$success-card-brd-color: #0bba83;
+$success-card-bg-color: rgba(12, 202, 142, 0.2);
+
+//Secondary Color
+$secondary-background-color:#E3E8E8;
+$secondary-background-hvr-color:#ced7d7;
+$secondary-background-inverse-color:rgba(227, 232, 232, 0.5);
+$secondary-inverse-color:rgba(0, 0, 0, 0.5);
+$secondary-outline-color:rgba(0,0,0,0.5);
+$secondary-brd-color:#dbe1e1;
+
+//Danger Color
+$danger-background-color:#F1635F;
+$danger-background-hvr-color:#ee413c;
+$danger-background-inverse-color:rgba(241, 99, 95, 0.2);
+$danger-brd-color: #f05551;
+$danger-card-color: #b74b48;
+$danger-card-brd-color: #de5b57;
+$danger-card-bg-color: rgba(241, 99, 95, 0.2);
+
+//Warning Color
+$warning-background-color:#FEBA47;
+$warning-background-hvr-color:#feac21;
+$warning-background-inverse-color:rgba(254, 186, 71, 0.2);
+$warning-brd-color:#feb438;
+$warning-card-color: #c18d36;
+$warning-card-brd-color: #eaab41;
+$warning-card-bg-color: rgba(254, 186, 71, 0.2);
+
+//Info Color
+$info-background-color:#009c8a;
+$info-background-hvr-color:#007668;
+$info-background-inverse-color:rgba(0, 156, 138, 0.2);
+$info-brd-color:#008d7c;
+$info-card-color: #007769;
+$info-card-brd-color: #00907f;
+$info-card-bg-color: rgba(0, 156, 138, 0.2);
+
+//Dark Color
+$dark-background-color:#35373a;
+$dark-background-hvr-color:$base-color;
+$dark-background-inverse-color:rgba(36, 35, 41, 0.2);
+
+//Light Color
+$light-color:$base-color;
+$light-background-hvr-color: #e2ecec;
+$light-inverse-color:rgba(0, 0, 0, 0.5);
+$light-background-inverse-color: #F9FBFB;
+$light-inverse-brdcolor:#d9d9d9;
+$light-background-color:#cbdcdc;
+
+
+// $toggle-background:#4a7df9;
+// $seconday: #83888c;
+// $success: #3ac359;
+// $danger: #dc4554;
+// $warning: #f5bf1f;
+// $info: #30bad0;
+// $dark: #3a3e42;
+
+//Social Color
+$fb-background:#3b579d;
+$fb-hvr-background:#2d4278;
+$tw-background:#1da1f2;
+$tw-hvr-background:#0c85d0;
+$dribble-background:#ea4c89;
+$dribble-hvr-background:#e51e6b;
+$ln-background:#0177b4;
+$ln-hvr-background:#015581;
+$gplus-background:#dc4a38;
+$gplus-hvr-background:#bf3322;
+
+//Table Color
+$table-hvr-color: #f9fbfd;
+$table-info: #b8e3de;
+$table-warning: #ffeccb;
+$table-danger: #fbd3d2;
+$table-primary: #c2e3ff;
+$table-success: #bbf0df;
+$grey-text: #969696;
+
+//loop classes
+$theme-colors: ( primary:#269bff, secondary: #E3E8E8, success: #0cca8e, info: #009c8a, warning: #FEBA47, danger: #F1635F, light: #F9FBFB, dark: #242329 );
+$border-classes: left, right, top, bottom;
+$font-weight-classes: 100, 200, 300, 400, 500, 600, 700, 800;
+
+

@@ -1,0 +1,264 @@
+.badge {
+    font-weight: 600;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.65rem;
+    border-radius: 0.25rem;
+    margin: 0.3rem 0;
+    &.badge-pill {
+        border-radius: 10rem;
+        padding: 0.3rem;
+    }
+}
+
+.type-badge-list {
+    li {
+        @include border(bottom, 1px, solid, rgba(0, 0, 0, 0.125));
+        padding: 0.75rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.badge-outline-primary {
+    color: $active-nav-color;
+    @include border(null, 1px, solid, $active-nav-color);
+}
+
+.badge-outline-secondary {
+    color: $secondary-inverse-color;
+    @include border(null, 1px, solid, $secondary-background-color);
+}
+
+.badge-outline-success {
+    color: $success-background-color;
+    @include border(null, 1px, solid, $success-background-color);
+}
+
+.badge-outline-danger {
+    color: $danger-background-color;
+    @include border(null, 1px, solid, $danger-background-color);
+}
+
+.badge-outline-warning {
+    color: $warning-background-color;
+    @include border(null, 1px, solid, $warning-background-color);
+}
+
+.badge-outline-info {
+    color: $info-background-color;
+    @include border(null, 1px, solid, $info-background-color);
+}
+
+.badge-outline-dark {
+    color: $base-color;
+    @include border(null, 1px, solid, $base-color);
+}
+
+.badge-outline-light {
+    color: $light-inverse-brdcolor;
+    @include border(null, 1px, solid, $light-inverse-brdcolor);
+}
+
+.badge-warning {
+    background-color: $warning-background-color;
+}
+
+.badge-primary {
+    background-color: $active-nav-color;
+}
+
+.badge-secondary {
+    background-color: $secondary-background-color;
+    color: $base-color;
+}
+
+.badge-info {
+    background-color: $info-background-color;
+}
+
+.badge-danger {
+    background-color: $danger-background-color;
+}
+
+.badge-success {
+    background-color: $success-background-color;
+}
+
+.badge-dark {
+    background-color: $base-color;
+}
+
+.badge-light {
+    background-color: $light-inverse-brdcolor;
+    color: $light-inverse-color;
+}
+
+.badge-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    @include border-radius(100%);
+    display: inline-block;
+    vertical-align: top;
+    &.badge-dot-primary {
+        background-color: $active-nav-color;
+    }
+    &.badge-dot-warning {
+        background-color: $warning-background-color;
+    }
+    &.badge-dot-primary {
+        background-color: $active-nav-color;
+    }
+    &.badge-dot-secondary {
+        background-color: $secondary-inverse-color;
+    }
+    &.badge-dot-info {
+        background-color: $info-background-color;
+    }
+    &.badge-dot-danger {
+        background-color: $danger-background-color;
+    }
+    &.badge-dot-success {
+        background-color: $success-background-color;
+    }
+    &.badge-dot-dark {
+        background-color: $base-color;
+    }
+    &.badge-dot-light {
+        background-color: $light-inverse-brdcolor;
+    }
+}
+
+.primary-color {
+    color: $active-nav-color;
+}
+
+.secondary-color {
+    color: $secondary-inverse-color;
+}
+
+.warning-color {
+    color: $warning-background-color;
+}
+
+.danger-color {
+    color: $danger-background-color;
+}
+
+.info-color {
+    color: $info-background-color;
+}
+
+.dark-color {
+    color: $base-color;
+}
+
+.success-color {
+    color: $success-background-color;
+}
+
+.light-color {
+    color: $light-inverse-brdcolor;
+}
+
+.btn-primary {
+    .badge {
+        background: $white-color;
+        color: $active-nav-color;
+    }
+}
+
+.btn-secondary {
+    .badge {
+        background: $white-color;
+        color: $secondary-inverse-color;
+    }
+}
+
+.btn-warning {
+    .badge {
+        background: $white-color;
+        color: $warning-background-color;
+    }
+}
+
+.btn-danger {
+    .badge {
+        background: $white-color;
+        color: $danger-background-color;
+    }
+}
+
+.btn-info {
+    .badge {
+        background: $white-color;
+        color: $info-background-color;
+    }
+}
+
+.btn-success {
+    .badge {
+        background: $white-color;
+        color: $success-background-color;
+    }
+}
+
+.btn-dark {
+    .badge {
+        background: $white-color;
+        color: $dark-background-color;
+    }
+}
+
+.btn-light {
+    .badge {
+        background: $white-color;
+        color: $light-inverse-color;
+    }
+}
+
+.btn-default {
+    .badge {
+        background: $base-color;
+        color: $white-color;
+    }
+}
+
+.btn-outline-primary {
+    @include btn-outline-badge($active-nav-color);
+}
+
+.btn-outline-secondary {
+    .badge {
+        background-color: $secondary-background-color;
+        color: $secondary-outline-color;
+    }
+    &:hover {
+        .badge {
+            background-color: $white-color;
+            color: $secondary-outline-color;
+        }
+    }
+}
+
+.btn-outline-warning {
+    @include btn-outline-badge($warning-background-color);
+}
+
+.btn-outline-danger {
+    @include btn-outline-badge($danger-background-color);
+}
+
+.btn-outline-info {
+    @include btn-outline-badge($info-background-color);
+}
+
+.btn-outline-success {
+   @include btn-outline-badge($success-background-color);
+}
+
+.btn-outline-dark {
+    @include btn-outline-badge($dark-background-color);
+}

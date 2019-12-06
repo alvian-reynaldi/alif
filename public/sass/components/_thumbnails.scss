@@ -1,0 +1,59 @@
+.thumbnail{
+    .col-lg-3 {
+        & > a {
+            display: block;
+        }
+    }
+    .overlay{
+        position: relative;
+        display: block;
+        .bg-overlay{
+            content: "";
+            @include position(absolute,0,0,0,0);
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            z-index: -9;
+            @include transition(opacity, 0.5s);
+        }
+        .bg-white{
+            opacity: 0.25;
+        }
+        &:hover{
+            .bg-overlay{
+                opacity: 1;
+                z-index: 2;
+                @include transition(opacity, 0.5s);
+            }
+            .thumb-text{
+                opacity: 1;
+                z-index: 3;
+                @include transition(opacity, 0.5s);
+            } 
+            .bg-white{
+                opacity: 0.25;
+            }
+        }
+        .thumb-text{
+            @include position(absolute,50%,0,null,0);
+            @include transform(translateY(-50%));
+            opacity: 0;
+            z-index: -9;
+            @include transition(opacity, 0.5s);
+            @include text-align(center);
+        }
+        &.img-shadow{
+            @include transition(all,0.5s);
+            &:hover{
+                box-shadow: 0 5px 20px rgba(24,28,33,0.4);
+                @include transition(all,0.5s);
+            }
+        }
+    }
+    @media only screen and(max-width:991px){
+        .col-lg-3 {
+            & > a {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

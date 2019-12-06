@@ -1,0 +1,179 @@
+.pagination {
+    .page-link {
+        padding: 0.65rem 1rem;
+        color: $base-color;
+        border-color: $box-brd-color;
+        &:hover,
+        &.active {
+            color: $active-nav-color;
+            background: $active-nav-background;
+        }
+        i {
+            line-height: 1;
+        }
+    }
+    .page-item {
+        &.disabled {
+            .page-link {
+                color: $pagination-link-disabled;
+            }
+        }
+    }
+    &.flat {
+        .page-link {
+            border-color: transparent;
+            border-radius: 2px;
+            margin-left: 0;
+        }
+    }
+    &.seprated {
+        .page-item {
+            margin-right: 2px;
+            margin-left: 2px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .page-link {
+            border-radius: 2px;
+            margin-left: 0;
+        }
+    }
+    &.rounded {
+        .page-item {
+            &:first-child {
+                a {
+                    border-radius: 25px 0 0 25px;
+                }
+            }
+            &:last-child {
+                a {
+                    border-radius: 0 25px 25px 0;
+                }
+            }
+        }
+    }
+    &.rounded-flat {
+        .page-item {
+            margin-right: 2px;
+            margin-left: 2px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .page-link {
+            border-color: transparent;
+            border-radius: 50%;
+            margin-left: 0;
+        }
+    }
+    &.rounded-seprated {
+        .page-item {
+            margin-right: 2px;
+            margin-left: 2px;
+            &:first-child {
+                margin-left: 0;
+                .page-link {
+                    border-radius: 25px 0 0 25px;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+                .page-link {
+                    border-radius: 0 25px 25px 0;
+                }
+            }
+        }
+        .page-link {
+            border-radius: 2px;
+            margin-left: 0;
+        }
+    }
+}
+
+.pagination-success {
+    .page-link {
+        color: $success-background-color;
+        border-color: $box-brd-color;
+        &.active {
+            background-color: $success-background-color;
+            border-color: $success-background-color;
+            color: $white-color;
+        }
+        &:hover {
+            background-color: $success-background-color;
+            border-color: $success-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.pagination-danger {
+    .page-link {
+        color: $danger-background-color;
+        border-color: $box-brd-color;
+        &.active {
+            background-color: $danger-background-color;
+            border-color: $danger-background-color;
+            color: $white-color;
+        }
+        &:hover {
+            background-color: $danger-background-color;
+            border-color: $danger-background-color;
+            color: $white-color;
+        }
+        &:first-child,
+        &:last-child {
+            border-radius: 2px;
+        }
+    }
+}
+
+.pagination-sm {
+    .page-link {
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+.pagination-lg {
+    .page-link {
+        padding: 1.2rem 1.8rem;
+    }
+}
+
+.arrow-pagination {
+    .page-link {
+        color: $active-nav-color;
+        border-color: $box-brd-color;
+        &:hover,
+        &.active {
+            background: $active-nav-color;
+            border-color: $active-nav-color;
+            color: $white-color;
+        }
+    }
+}
+
+.space-between {
+    .page-link {
+        margin-right: 10px;
+        border-radius: 4px;
+        border-color: $box-brd-color;
+        &:hover,
+        &.active {
+            background: none;
+            border-color: $active-nav-color;
+        }
+    }
+    .disabled {
+        .page-link {
+            opacity: 0.7;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.table {
+    th,
+    td {
+        padding: 18px 30px;
+        border-color: $box-brd-color;
+    }
+    th {
+        @include font-weight(700);
+        font-size: px-rem($f14);
+    }
+    thead {
+        th {
+            border-top: 0;
+            border-bottom-width: 1px;
+            border-color: $box-brd-color;
+        }
+    }
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    background-color: $table-hvr-color;
+                }
+            }
+        }
+    }
+    &.table-striped {
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: $table-hvr-color;
+                }
+            }
+        }
+    }
+    .progress {
+        &.progress-sm {
+            height: 8px;
+            margin-top: 8px;
+        }
+    }
+    &.table-bordered {
+        border-color: $popover-brd-color;
+        thead {
+            @include border(null, 1px, solid, $popover-brd-color);
+            border-bottom: none;
+        }
+        td {
+            border-color: $popover-brd-color;
+        }
+        th {
+            border: none;
+        }
+    }
+    &.table-dark {
+        th,
+        td {
+            border-color: $dark-text;
+        }
+    }
+}
+
+.table-info {
+    &>th,
+    &>td {
+        background-color: $table-info;
+    }
+}
+
+.table-warning {
+    &>th,
+    &>td {
+        background-color: $table-warning;
+    }
+}
+
+.table-danger {
+    &>th,
+    &>td {
+        background-color: $table-danger;
+    }
+}
+
+.table-success {
+    &>th,
+    &>td {
+        background-color: $table-success;
+    }
+}
+
+.table-primary {
+    &>th,
+    &>td {
+        background-color: $table-primary;
+    }
+}
+
+.table.primary-table {
+    border-spacing: 2px;   
+    thead {
+        th {
+            border-bottom-width: 1px;
+            border-bottom-color: $popover-brd-color;
+            border-bottom: none;
+        }
+    }  
+    tbody{
+        tr{
+            &:first-child{
+                td{
+                    border-top:none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.tooltip {
+    .tooltip-inner {
+        padding: 0.6rem 1rem;
+    }
+    &.primary {
+        @include tooltip($active-nav-color);
+    }
+    &.secondary {
+        @include tooltip($secondary);
+    }
+    &.success {
+        @include tooltip($success);
+    }
+    &.danger {
+        @include tooltip($danger);
+    }
+    &.warning {
+        @include tooltip($warning);
+    }
+    &.info {
+        @include tooltip($info);
+    }
+    &.dark {
+        @include tooltip($dark);
+    }
+}
+
+.popover {
+    max-width: $popover-max-width;
+    background-color: $popover-bg;
+    border-color: $popover-brd-color;
+    &.bs-popover-bottom {
+        .arrow {
+            &:before {
+                border-bottom-color: $popover-brd-color;
+            }
+        }
+    }
+    &.bs-popover-top {
+        .arrow {
+            &:before {
+                border-top-color: $popover-brd-color;
+            }
+        }
+    }
+    &.bs-popover-left {
+        .arrow {
+            &:before {
+                border-left-color: $popover-brd-color;
+            }
+        }
+    }
+    &.bs-popover-right {
+        .arrow {
+            &:before {
+                border-right-color: $popover-brd-color;
+            }
+        }
+    }
+    .popover-header {
+        @include font-weight(600);
+        padding: 0.6rem 1rem;
+        color: $heading-color;
+        background-color: $popover-bg;
+        border-bottom: none;
+        color: $active-nav-color;
+    }
+    .popover-body {
+        padding: 0.6rem 1rem;
+        color: $base-color;
+        margin-bottom: 10px;
+        background-color: $popover-bg;
+    }
+    &.primary {
+        @include popover($active-nav-color);
+        .popover-header {
+            color: $white;
+            background: $active-nav-color;
+        }
+    }
+    &.secondary {
+        @include popover($secondary);
+        .popover-header {
+            color: $white;
+            background: $secondary;
+        }
+    }
+    &.success {
+        @include popover($success);
+        .popover-header {
+            color: $white;
+            background: $success;
+        }
+    }
+    &.danger {
+        @include popover($danger);
+        .popover-header {
+            color: $white;
+            background: $danger;
+        }
+    }
+    &.warning {
+        @include popover($warning);
+        .popover-header {
+            color: $white;
+            background: $warning;
+        }
+    }
+    &.info {
+        @include popover($info);
+        .popover-header {
+            color: $white;
+            background: $info;
+        }
+    }
+    &.dark {
+        @include popover($dark);
+        .popover-header {
+            color: $white;
+            background: $dark;
+        }
+    }
+}

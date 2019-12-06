@@ -1,0 +1,120 @@
+.md-editor {
+    border-color: $popover-brd-color;
+    &>.md-footer,
+    &>.md-header {
+        padding: 10px;
+        background-color: $white-color;
+        &>.btn-group {
+            margin-right: 10px;
+            @media only screen and (max-width: 579px){
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .btn{
+        &:hover{
+            color: theme-color("primary");
+        }
+    }
+    &>textarea {
+        padding: 10px;
+        background-color: $white-color;
+        border-color: $popover-brd-color;
+        ;
+    }
+    &.active {
+        border-color: theme-color("primary");
+        box-shadow: none;
+        &>textarea {
+            border-color: theme-color("primary");
+        }
+    }
+    &>.md-preview {
+        padding: 10px;
+    }
+}
+
+.ql-container {
+    min-height: 20rem;
+    background-color: $white-color;
+    border-radius: 0;
+    padding: 15px;
+    &.ql-snow {
+        border-color: $popover-brd-color;
+    }
+    .ql-editor {
+        padding: 0;
+    }
+}
+
+.ql-snow {
+    &.ql-toolbar {
+        .ql-formats {
+            &>button {
+                &:hover,
+                &.ql-active {
+                    color: theme-color("primary");
+                    .ql-stroke {
+                        stroke: theme-color("primary");
+                    }
+                }
+            }
+            .ql-picker-label {
+                &.ql-active, &:hover {
+                    color: theme-color("primary");
+                }
+            }
+            .ql-picker-options {
+               .ql-picker-item{
+                    &.ql-selected, &:hover {
+                        color: theme-color("primary");
+                    }
+               }
+            }
+        }
+    }
+}
+
+.ql-toolbar {
+    &.ql-snow {
+        border-color: $popover-brd-color;
+        .ql-picker {
+            @include font-weight(400);
+        }
+    }
+}
+
+.editor-toolbar{
+    border-color: $popover-brd-color;
+    opacity: 1;
+    border-radius: 0;
+    a{
+        color: $base-color!important;
+        &:hover,&.active{
+            border-color: theme-color("primary");
+            color: theme-color("primary")!important;
+            background-color: none;
+        }
+    }
+}
+.documentation-wrapper{
+    .CodeMirror{
+        border-color: $popover-brd-color;
+        border-radius: 0;
+        min-height: auto;
+        height: auto;
+        .CodeMirror-placeholder {
+            opacity: 1;
+            color: rgba(0,0,0,0.7);
+            font-style: italic;
+        }
+        .CodeMirror-scroll{
+            min-height: auto;
+            max-height: 300px;
+            overflow: auto!important;
+        }
+    }
+}
+.editor-preview-active, .editor-preview-active-side{
+    background-color: $white-color;
+}

@@ -1,0 +1,138 @@
+.dropzone {
+    @include border(null, 3px, dashed, $popover-brd-color);
+    .dz-message {
+        margin: 8rem 0;
+        color: $form-control-color;
+        font-size: 1.5rem;
+        .note {
+            color: $nav-heading-color;
+            float: left;
+            width: 100%;
+            margin-top: 8px;
+            font-size: 1rem;
+        }
+    }
+    .dz-preview {
+        width: 13.25rem;
+        @include border(null, 1px, solid, $popover-brd-color);
+        border-radius: 4px;
+        .dz-progress {
+            height: 10px;
+            width: 100px;
+            background-color: theme-color("primary");
+            left: 0;
+            right: 0;
+            top: 65px;
+            margin: auto;
+            .dz-upload {
+                background: theme-color("primary");
+            }
+        }
+        .dz-details {
+            position: relative;
+            padding: 10px 10px 5px 10px;
+            color: $nav-heading-color;
+            opacity: 1;
+            @include border(bottom, 1px, solid, $popover-brd-color);
+            @include border(top, 1px, solid, $popover-brd-color);
+            @include text-align(left);
+            .dz-size {
+                font-size: 1rem;
+                margin-top: 15px;
+                margin-bottom: 0;
+                strong {
+                    @include font-weight(400);
+                }
+            }
+            .dz-filename {
+                @include position(absolute, 5px, 0, null, 8px);
+                color: $base-color;
+            }
+        }
+        .dz-image {
+            padding: 10px;
+            @include text-align(center);
+            width: 100%;
+            height: 140px;
+            background: $file-upload-bg;
+            img {
+                display: inline-block;
+                @include transition(all, 0.5s);
+            }
+        }
+        .dz-success-mark,
+        .dz-error-mark {
+            top: 46px;
+            right: 0;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            margin: auto;
+            &:before {
+                font-family: $material-font-family;
+                font-size: px-rem($f36);
+            }
+            svg {
+                display: none;
+            }
+        }
+        .dz-success-mark {
+            color: theme-color("success");
+            &:before {
+                content: '\F12C';
+            }
+        }
+        .dz-error-mark {
+            color: theme-color("danger");
+            &:before {
+                content: '\F156';
+            }
+        }
+        .dz-error-message {
+            background: $file-upload-img-err;
+            border-radius: 0;
+            border: 0;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            right: 0;
+            max-height: 140px;
+            bottom: 0;
+            &:after {
+                display: none;
+            }
+        }
+        .dz-remove {
+            padding: .375rem 0;
+            font-size: 0.875rem;
+        }
+        &:hover {
+            .dz-image {
+                img {
+                    filter: none;
+                    @include transition(all, 0.5s);
+                }
+            }
+        }
+    }
+}
+
+.flow-container{
+    .flow-error {
+        display: none
+    }
+    .flow-drop {
+        position: relative;
+        display: none;
+        width: 100%;
+        @include text-align(center);
+        @include border(null, 3px, dashed, $popover-brd-color);
+    }
+    .flow-progress{
+        .progress-resume-link, .progress-pause-link {
+            display: none
+        }
+    }
+}

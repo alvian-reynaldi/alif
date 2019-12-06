@@ -1,0 +1,474 @@
+.circle-icon {
+    @include border-radius(100%);
+    width: 30px;
+    height: 30px;
+    padding: 4px 0;
+    &.btn-lg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.btn-sm {
+    font-size: px-rem($f12);
+    line-height: 1.2;
+    padding: 5px 10px;
+}
+
+.btn-secondary {
+    &.btn-outline {
+        background: none;
+        border-color: $secondary-background-color;
+        color: $secondary-outline-color;
+        &:hover {
+            background: $secondary-background-color;
+            color: $base-color;
+        }
+    }
+}
+
+.btn-primary {
+    &.btn-outline {
+        background: none;
+        border-color: $active-nav-color;
+        color: $active-nav-color;
+        &:hover {
+            background: $active-nav-color;
+            color: $white-color
+        }
+    }
+}
+
+// $brand-success == $green
+.btn-success {
+    &.btn-outline {
+        background: none;
+        border-color: $success-background-color;
+        color: $success-background-color;
+        &:hover {
+            background: $success-background-color;
+            color: $white-color
+        }
+    }
+}
+
+// $brandd-info === $teal
+.btn-info {
+    &.btn-outline {
+        background: none;
+        border-color: $info-background-color;
+        color: $info-background-color;
+        &:hover {
+            background: $info-background-color;
+            color: $white-color
+        }
+    }
+}
+
+// $brandd-warning === $orange
+.btn-warning {
+    &.btn-outline {
+        background: none;
+        border-color: $warning-background-color;
+        color: $warning-background-color;
+        &:hover {
+            background: $warning-background-color;
+            color: $white-color
+        }
+    }
+}
+
+// $brandd-danger == $red
+.btn-danger {
+    &.btn-outline {
+        background: none;
+        border-color: $danger-background-color;
+        color: $danger-background-color;
+        &:hover {
+            background: $danger-background-color;
+            color: $white-color
+        }
+    }
+}
+
+.btn-dark {
+    &.btn-outline {
+        background: none;
+        border-color: $dark-background-color;
+        color: $dark-background-color;
+        &:hover {
+            background: $dark-background-color;
+            color: $white-color
+        }
+    }
+}
+
+.btn {
+	&.btn-rounded{
+		@include border-radius(100%);
+		&.btn-icons{
+			width:45px;
+			height: 45px;
+			padding: 0;
+			&.btn-lg{
+				width:65px;
+				height: 65px;
+			}
+			&.btn-md{
+				width:55px;
+				height: 55px;
+			}
+			&.btn-sm{
+				width:40px;
+				height: 40px;
+			}
+		}
+	}
+    &.btn-inverse-primary {
+        background: $primary-background-inverse-color;
+        border-color: $primary-background-inverse-color;
+        color: $active-nav-color;
+        &:hover {
+            background: $active-nav-color;
+            color: $white-color;
+		}
+	}
+	&.btn-inverse-secondary {
+        background: $secondary-background-inverse-color;
+        border-color: $secondary-background-inverse-color;
+        color: $secondary-inverse-color;
+        &:hover {
+            background: $secondary-background-color;
+		}
+	}
+	&.btn-inverse-success {
+        background: $success-background-inverse-color;
+        border-color: $success-background-inverse-color;
+        color: $success-background-color;
+        &:hover {
+			background: $success-background-color;
+			color:$white-color;
+		}
+	}
+	&.btn-inverse-warning {
+        background: $warning-background-inverse-color;
+        border-color: $warning-background-inverse-color;
+        color: $warning-background-color;
+        &:hover {
+			background: $warning-background-color;
+			color:$white-color;
+		}
+	}
+	&.btn-inverse-info {
+        background: $info-background-inverse-color;
+        border-color: $info-background-inverse-color;
+        color: $info-background-color;
+        &:hover {
+			background: $info-background-color;
+			color:$white-color;
+		}
+	}
+	&.btn-inverse-danger {
+        background: $danger-background-inverse-color;
+        border-color: $danger-background-inverse-color;
+        color: $danger-background-color;
+        &:hover {
+			background: $danger-background-color;
+			color:$white-color;
+		}
+	}
+	&.btn-inverse-light {
+        background-color: $white-color;
+        border-color: $light-inverse-brdcolor;
+        color: $light-inverse-color;
+        &:hover{
+            background-color: $light-background-inverse-color;
+        }
+	}
+	&.btn-inverse-dark {
+        background: $dark-background-inverse-color;
+        border-color: $dark-background-inverse-color;
+        color: $dark-background-hvr-color;
+        &:hover {
+			background: $dark-background-hvr-color;
+			color:$white-color;
+		}
+    }
+}
+
+.box {
+    background: $white-color;
+    @include border(null, 1px, solid, $box-brd-color);
+    @include border-radius(3px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .box-header {
+        color: $black-color;
+    }
+}
+
+.heading {
+    padding-bottom: 30px;
+    color: $black-color;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.display-1 {
+    font-size: px-rem($f52);
+    color: $black-color;
+}
+
+.display-2 {
+    font-size: px-rem($f45);
+    color: $black-color;
+}
+
+.display-3 {
+    font-size: px-rem($f39);
+    color: $black-color;
+}
+
+.display-4 {
+    font-size: px-rem($f26);
+    color: $black-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    small {
+        font-size: 14px;
+    }
+}
+
+h5,
+h6 {
+    small {
+        font-size: 11px;
+    }
+}
+
+.hover-image {
+    position: relative;
+    @media only screen and (max-width:767px) {
+        margin-bottom: 15px;
+    }
+    .hover-text {
+        @include position(absolute, 0, 0, 0, 0, 1);
+        background: rgba(0, 0, 0, 0.3);
+        @include text-align(center);
+        @include transform(scale(0));
+        @include transition-cubic(transform, 0.5s, cubic-bezier(0.4, 0, 1, 1));
+        .abs-text {
+            @include position(absolute, 50%, 0, null, 0, null);
+            @include transform(translateY(-50%));
+            color: $white-color;
+            opacity: 0;
+            @include transition(opacity, 0.25s ease-in 0s);
+            a {
+                color: $white-color;
+                padding: 5px;
+                @include border(null, 1px, solid, $white-color);
+                @include border-radius(3px);
+                @include transform(scale(1));
+                display: inline-block;
+                @include transition(transform, 0.25s);
+                &:hover {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+    &:hover {
+        .hover-text {
+            @include transform(scale(1));
+            .abs-text {
+                opacity: 1;
+                @include transition(opacity, 0.25s ease-in 0.5s);
+            }
+        }
+    }
+}
+
+.btn-social{
+	width:44px;
+	height: 44px;
+	color:$white-color;
+	@include border-radius(4px);
+	box-shadow: none;
+	border:none;
+	cursor: pointer;
+	i{
+		font-size: px-rem($f16);
+	}
+	&.btn-rounded{
+		@include border-radius(100%);
+    }
+	&.btn-fb{
+		background: $fb-background;
+		&:hover{
+			background: $fb-hvr-background;
+		}
+	} 
+	&.btn-tw{
+		background: $tw-background;
+		&:hover{
+			background: $tw-hvr-background;
+		}
+	} 
+	&.btn-dribble{
+		background: $dribble-background;
+		&:hover{
+			background: $dribble-hvr-background;
+		}
+	} 
+	&.btn-ln{
+		background: $ln-background;
+		&:hover{
+			background: $ln-hvr-background;
+		}
+	} 
+	&.btn-gplus{
+		background: $gplus-background;
+		&:hover{
+			background: $gplus-hvr-background;
+		}
+	} 
+}
+.btn-social-outline{
+	width:44px;
+	height: 44px;
+	color:$white-color;
+	@include border-radius(4px);
+	box-shadow: none;
+    cursor: pointer;
+    background: $white-color;
+	i{
+		font-size: px-rem($f16);
+	}
+	&.btn-rounded{
+		@include border-radius(100%);
+	}
+	&.btn-outline-fb{
+		color: $fb-background;
+		border-color:$fb-background;
+		&:hover{
+			color: $white-color;
+			background:$fb-background;
+		}
+	} 
+	&.btn-outline-tw{
+		color: $tw-background;
+		border-color: $tw-background;
+		&:hover{
+			color: $white-color;
+			background:$tw-background;
+		}
+	} 
+	&.btn-outline-dribble{
+		color: $dribble-background;
+		border-color: $dribble-background;
+		&:hover{
+			color: $white-color;
+			background:$dribble-background;
+		}
+	} 
+	&.btn-outline-ln{
+		color: $ln-background;
+		border-color: $ln-background;
+		&:hover{
+			color: $white-color;
+			background:$ln-background;
+		}
+	} 
+	&.btn-outline-gplus{
+		color: $gplus-background;
+		border-color: $gplus-background;
+		&:hover{
+			color: $white-color;
+			background:$gplus-background;
+		}
+	} 
+}
+a{
+    &.btn-social-outline{
+        line-height: 40px;
+        @include text-align(center);
+        @include border(null, 1px, solid, $fb-background);
+    }
+}
+
+.blockquote{
+    @include border(null,1px,solid,transparent);
+    padding: 20px;
+    .blockquote-footer{
+        font-size: 80%;
+        padding: 10px 15px;
+    }
+    @each $key, $value in $theme-colors{
+        &.blockquote-#{$key}{
+            border-color:$value;
+        }
+    }
+}
+
+.list-arrow, .list-circle, .list-ticked{
+    li{
+        padding: 5px 0;
+        &:before{
+            font-family: $material-font-family;
+            width: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        li{
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+.list-ticked{
+    & > li:before {
+        content: '\F12C';
+        color: $info-background-color;
+    }
+}
+
+.list-arrow{
+    & > li:before {
+        content: '\F142';
+        color: $danger-background-color;
+    }
+}
+
+.list-circle{
+    & > li:before {
+        content: '\F5E0';
+        color: $success-background-color;
+        
+    }
+}
+
+.todo-list {
+    li {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

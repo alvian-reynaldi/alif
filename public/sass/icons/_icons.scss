@@ -1,0 +1,54 @@
+.icons-list {
+    @include border(left, 1px, solid, $popover-brd-color);
+    flex-wrap: wrap;
+    &>div {
+        background: $white-color;
+        @include border(top, 1px, solid, $popover-brd-color);
+        @include border(right, 1px, solid, $popover-brd-color);
+        -webkit-align-items: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .preview {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        i {
+            font-size: 18px;
+            color: theme-color('primary');
+            width: 40px;
+            display: inline-block;
+        }
+    }
+}
+
+.seprate-icons {
+    @include border(left, 1px, solid, $popover-brd-color);
+    flex-wrap: wrap;
+    &>div {
+        background: $white-color;
+        @include border(top, 1px, solid, $popover-brd-color);
+        @include border(right, 1px, solid, $popover-brd-color);
+        -webkit-align-items: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .preview {
+        text-align: center;
+        i {
+            font-size: 24px;
+            color: theme-color('primary');
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        span,
+        code {
+            display: block;
+        }
+        code {
+            margin-top: 5px;
+        }
+    }
+}

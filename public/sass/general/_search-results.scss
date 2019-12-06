@@ -1,0 +1,13 @@
+.results{
+    padding-bottom:25px;
+    margin-bottom: 25px;
+    @include border(bottom,1px,solid,$popover-brd-color);
+    .page-url{
+        margin:2px 0;
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+    .page-description{
+        margin-bottom: 0;
+    }
+}

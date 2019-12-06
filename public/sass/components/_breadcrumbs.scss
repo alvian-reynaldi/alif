@@ -1,0 +1,38 @@
+.templatew-demo {
+    .breadcrumb {
+        background-color: unset;
+        @include border(null, 1px, solid, $breadcrumb-brd);
+        .active {
+            color: $active-nav-color;
+        }
+    }
+}
+
+.bg-primary,
+.bg-warning,
+.bg-info,
+.bg-danger,
+.bg-success,
+.bg-dark {
+    &.breadcrumb {
+        border: none;
+        li {
+            color: $white-color;
+            &.active {
+                color: $white-color;
+            }
+            a {
+                color: inherit;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .breadcrumb-item {
+        &:before {
+            color: $white-color;
+        }
+    }
+}

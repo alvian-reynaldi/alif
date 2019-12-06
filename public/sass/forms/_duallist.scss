@@ -1,0 +1,19 @@
+.bootstrap-duallistbox-container{
+    select{
+        background: none;
+        option {
+            padding: 5px;
+            line-height: 1;
+        }
+    }
+    &:not(.moveonselect){
+        select{
+            border-color: $popover-brd-color;
+        }
+    }
+    .box2{
+        @media only screen and (max-width: 767px){
+            margin-top: 15px;
+        }
+    }
+}

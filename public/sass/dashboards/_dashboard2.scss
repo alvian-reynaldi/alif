@@ -1,0 +1,18 @@
+#dashboard-sales-chart {
+    height: 200px;
+    display: flex;
+}
+
+.jqstooltip {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.easy-pie-chart {
+    position: relative;
+    span {
+        @include position(absolute, 50%, 0, null, 0);
+        @include transform(translateY(-50%));
+    }
+}

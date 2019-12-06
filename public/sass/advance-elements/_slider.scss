@@ -1,0 +1,198 @@
+.noUi-target {
+    background-color: $slider-bg-color;
+    border: none;
+    box-shadow: none;
+    &.noUi-horizontal {
+        height: 0.5rem;
+        margin-bottom: 1rem;
+        .noUi-tooltip {
+            font-family: $base-font-family;
+            padding: 13px 12px;
+            border: none;
+            @include border-radius(4px);
+        }
+    }
+    .noUi-handle {
+        width: 18px;
+        height: 18px;
+        @include border-radius(100%);
+        border: none;
+        &:before {
+            @include hide-element;
+        }
+        &:after {
+            width: 6px;
+            height: 6px;
+            @include border-radius(100%);
+            top: 6px;
+            left: 6px;
+        }
+    }
+    .noUi-pips {
+        .noUi-value {
+            color: $base-color;
+            font-size: 0.94rem;
+            font-family: $base-font-family;
+        }
+        .noUi-marker-horizontal {
+            height: 9px;
+            width: 1px;
+        }
+        .noUi-marker-horizontal,
+        .noUi-marker-vertical {
+            background: $popover-brd-color;
+        }
+    }
+}
+
+.slider-primary {
+    .noUi-base {
+        .noUi-connect {
+            background: $active-nav-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $active-nav-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $active-nav-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-danger {
+    .noUi-base {
+        .noUi-connect {
+            background: $danger-background-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $danger-background-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $danger-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-warning {
+    .noUi-base {
+        .noUi-connect {
+            background: $warning-background-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $warning-background-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $warning-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-info {
+    .noUi-base {
+        .noUi-connect {
+            background: $info-background-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $info-background-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $info-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-success {
+    .noUi-base {
+        .noUi-connect {
+            background: $success-background-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $success-background-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $success-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-dark {
+    .noUi-base {
+        .noUi-connect {
+            background: $dark-background-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $dark-background-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $dark-background-color;
+            color: $white-color;
+        }
+    }
+}
+
+.slider-light {
+    .noUi-base {
+        .noUi-connect {
+            background: $light-inverse-color;
+        }
+    }
+    .noUi-handle {
+        &:after {
+            background: $light-inverse-color;
+        }
+    }
+    &.noUi-horizontal {
+        .noUi-tooltip {
+            background: $light-inverse-color;
+            color: $white-color;
+        }
+    }
+}
+
+.irs-hidden-input {
+    position: absolute !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    outline: none !important;
+    z-index: -9999 !important;
+    background: none !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+}

@@ -1,0 +1,121 @@
+.progress {
+    height: 1.5rem;
+}
+.bg-default {
+    background-color: $nav-heading-color;
+}
+.progress {
+    border-radius: 40px;
+    height: 1.25rem;
+    &.progress-xs {
+        height: 0.5rem;
+    }
+    &.progress-sm {
+        height: 1rem;
+    }
+    &.progress-lg {
+        height: 1.5rem;
+    }
+    &.progress-xl {
+        height: 2rem;
+    }
+}
+
+
+.progress-custom{
+    &.progress-blue{
+      .progress-custom-bar{
+        border-color: theme-color('primary');
+      }
+      .progress-custom-left{
+        .progress-custom-bar{
+          animation: loading-2 1.5s linear forwards 1.8s;
+        }
+      }
+    }
+    &.yellow{
+      .progress-custom-bar{
+        border-color: theme-color('warning');
+      }
+      .progress-custom-left{
+        .progress-custom-bar{
+          animation: loading-3 1s linear forwards 1.8s;
+        }
+      }
+    }
+    &.pink{
+      .progress-custom-bar{
+        border-color: theme-color('danger');
+      }
+      .progress-custom-left{
+        .progress-custom-bar{
+          animation: loading-4 0.4s linear forwards 1.8s;
+        }
+      }
+    }
+    &.green{
+      .progress-custom-bar{
+        border-color: theme-color('success');
+      }
+      .progress-custom-left{
+        .progress-custom-bar{
+          animation: loading-5 1.2s linear forwards 1.8s;
+        }
+      }
+    }
+  }
+  
+  @keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+  }
+  @keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+  }
+  @keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+  }
+  @keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+  }
+  @keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+  }
+  
+  @media only screen and (max-width: 990px){
+    .progress-custom{ margin-bottom: 20px; }
+  }

@@ -1,0 +1,305 @@
+.btn {
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    @include transition(all, 0.5s);
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.btn-primary {
+    background: $active-nav-color;
+    border-color: $active-nav-color;
+    color: $white-color;
+    &:hover,
+    &:focus,
+    a:visited,
+    &.active,
+    &:active {
+        background: $primary-hvr-color;
+        border-color: $primary-hvr-color;
+        color: $white-color;
+    }
+}
+
+a {
+    &.btn-primary {
+        &:focus,
+        &:active,
+        a:visited {
+            color: $white-color;
+        }
+    }
+}
+
+.btn-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    &:hover {
+        box-shadow: 0 0 4px rgba(0, 0, 0, .18), 0 4px 4px rgba(0, 0, 0, .36);
+    }
+}
+
+.btn-secondary {
+    color: $base-color;
+    background: $secondary-background-color;
+    border-color: $secondary-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $secondary-background-hvr-color;
+        color: $base-color;
+        border-color: $secondary-background-hvr-color;
+    }
+}
+
+
+.btn-success {
+    color: $white-color;
+    background: $success-background-color;
+    border-color: $success-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $success-background-hvr-color;
+        color: $white-color;
+        border-color: $success-background-hvr-color;
+    }
+}
+
+
+.btn-warning {
+    color: $white-color;
+    background: $warning-background-color;
+    border-color: $warning-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $warning-background-hvr-color;
+        color: $white-color;
+        border-color: $warning-background-hvr-color;
+    }
+}
+
+
+.btn-info {
+    color: $white-color;
+    background: $info-background-color;
+    border-color: $info-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $info-background-hvr-color;
+        color: $white-color;
+        border-color: $info-background-hvr-color;
+    }
+}
+
+
+
+.btn-danger {
+    color: $white-color;
+    background: $danger-background-color;
+    border-color: $danger-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $danger-background-hvr-color;
+        color: $white-color;
+        border-color: $danger-background-hvr-color;
+    }
+}
+
+.btn-dark {
+    color: $white-color;
+    background: $dark-background-color;
+    border-color: $dark-background-color;
+    box-shadow: none;
+    &:hover,
+    &.active,
+    &:active {
+        background: $dark-background-hvr-color;
+        color: $white-color;
+        border-color: $dark-background-hvr-color;
+    }
+}
+
+.btn-inline-spacing {
+    .btn,
+    .btn-floating {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.inline-spacing {
+    & > *{
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-outline-primary{
+    color: $active-nav-color;
+    border-color: $active-nav-color;
+    &:hover{
+        background-color: $active-nav-color;
+        color: $white-color;
+        border-color: $active-nav-color;
+    }
+}
+.btn-outline-secondary{
+    color: $secondary-outline-color;
+    border-color: $secondary-background-color;
+    &:hover{
+        background-color: $secondary-background-color;
+        color: $secondary-outline-color;
+        border-color: $secondary-background-color;
+    }
+}
+.btn-outline-warning{
+    color: $warning-background-color;
+    border-color: $warning-background-color;
+    &:hover{
+        background-color: $warning-background-color;
+        color: $white-color;
+        border-color: $warning-background-color;
+    }
+}
+.btn-outline-danger{
+    color: $danger-background-color;
+    border-color: $danger-background-color;
+    &:hover{
+        background-color: $danger-background-color;
+        color: $white-color;
+        border-color: $danger-background-color;
+    }
+}
+.btn-outline-info{
+    color: $info-background-color;
+    border-color: $info-background-color;
+    &:hover{
+        background-color: $info-background-color;
+        color: $white-color;
+        border-color: $info-background-color;
+    }
+}
+.btn-outline-success{
+    color: $success-background-color;
+    border-color: $success-background-color;
+    &:hover{
+        background-color: $success-background-color;
+        color: $white-color;
+        border-color: $success-background-color;
+    }
+}
+.btn-outline-dark{
+    color: $dark-background-color;
+    border-color: $dark-background-color;
+    &:hover{
+        background-color: $dark-background-color;
+        color: $white-color;
+        border-color: $dark-background-color;
+    }
+}
+
+.btn-outline-light{
+    color: $light-background-color;
+    border-color: $light-background-color;
+    &:hover{
+        background-color: $light-background-color;
+        color: $secondary-outline-color;
+        border-color: $light-background-color;
+    }
+}
+
+
+
+
+.btn {
+    padding: 0.7rem 1.375rem;
+    font-size: px-rem($f14);
+    line-height: 1;
+    &.btn-sm {
+        font-size: px-rem($f12);
+        padding: 0.375rem 1.25rem;
+    }
+    &.btn-xs{
+        font-size: px-rem($f12);
+        padding: 0.2rem 0.75rem;
+    }
+    &.btn-md {
+        padding: 0.8rem 1.375rem;
+        font-size: px-rem($f16);
+    }
+    &.btn-lg{
+        padding: .9rem 1.5rem;
+        font-size: px-rem($f18);
+    }
+}
+
+.btn-default {
+    color: $default-color;
+    border-color: $default-brd-color;
+    background: none;
+}
+
+.btn-link {
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+.btn-light {
+    background-color: $light-background-inverse-color;
+    color: $base-color;
+    &:hover{
+        background-color: $light-background-hvr-color;
+        border-color: $light-background-hvr-color;
+    }
+}
+
+.shadow-btn {
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.show {
+    &>.btn-secondary {
+        &.dropdown-toggle {
+            background: $secondary-background-color;
+            border-color: $secondary-background-color;
+            box-shadow: none;
+            &:hover {
+                background: $secondary-background-hvr-color;
+                border-color: $secondary-background-hvr-color;
+            }
+        }
+    }
+}
+
+.btn-group{
+    .btn-primary{
+        border-color: $primary-brd-color;
+    }
+    .btn-secondary{
+        border-color: $secondary-brd-color;
+    }
+    .btn-danger{
+        border-color: $danger-brd-color;
+    }
+    .btn-warning{
+        border-color: $warning-brd-color;
+    }
+    .btn-info{
+        border-color: $info-brd-color;
+    }
+    .btn-success{
+        border-color: $success-brd-color;
+    }
+}

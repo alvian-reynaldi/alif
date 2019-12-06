@@ -1,0 +1,275 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+.dataTables_wrapper {
+    &.form-inline {
+        display: inline-block;
+        width: 100%;
+    }
+    .html5buttons {
+        float: right;
+        width: 100%;
+        @include text-align(right);
+        margin: 0 0 20px 0;
+    }
+    .dataTables_length {
+        float: left;
+        select {
+            margin: 0 5px 0 10px;
+            padding: 0;
+            height: 28px !important;
+            width: 45px !important;
+            font-size: 12px;
+            display: inline-block;
+        }
+        @media only screen and (max-width:767px){
+            width: 100%;
+            label{
+                width:100%;
+                justify-content: flex-start;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .dataTables_filter{
+        float: right;
+        margin-bottom: 20px;
+        input{
+            margin-left: 10px;
+        }
+        @media only screen and (max-width:767px){
+            width: 100%;
+            label{
+                justify-content: flex-end;
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width:579px){
+            input{
+                margin-left: 0;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    }
+    .dt-buttons {
+        float: none;
+        display: inline-block;
+    }
+    .dt-button {
+        margin: 0 10px 0 0;
+        border-color: $active-nav-color;
+        background-color: $white-color;
+        @include border-radius(50px);
+        float: left;
+        border-collapse: collapse;
+        padding: 0.6rem 1.375rem;
+        color: $active-nav-color;
+        background-image: none !important;
+        line-height: 0.8rem;
+        font-size: px-rem($f12);
+        @media only screen and (max-width:400px){
+            margin-bottom: 15px;
+        }
+        &:hover {
+            background-color: $active-nav-color;
+            color: $white-color;
+            &:not(.disabled) {
+                border-color: $active-nav-color;
+                background: $active-nav-color;
+                color: $white-color;
+            }
+        }
+        &:focus {
+            &:not(.disabled) {
+                background: none;
+                border: none;
+                text-shadow: none;
+            }
+        }
+    }
+    .dt-button:last-child {
+        margin-right: 0;
+    }
+    .dataTables_info{
+        float: left;
+        @media only screen and (max-width:767px){
+            text-align: left !important;
+            margin-bottom: 10px;
+        }
+    }
+    .dataTables_paginate {
+        float: right;
+        @media only screen and (max-width:767px){
+            margin-left: 2px !important;
+            float: left;
+            width: 100%;
+        }
+        .paginate_button {
+            background: $white-color;
+            padding: 0;
+            margin: 0;
+            border: none;
+            min-width: 35.81px;
+            &:first-child {
+                a {
+                    border-top-left-radius: 0.25rem;
+                    border-bottom-left-radius: 0.25rem;
+                    text-indent: -99999px
+                }
+            }
+            &:last-child {
+                a {
+                    border-top-right-radius: 0.25rem;
+                    border-bottom-right-radius: 0.25rem;
+                    text-indent: -99999px
+                }
+            }
+            a {
+                color: $active-nav-color;
+                padding: 0.65rem 1rem;
+                display: block;
+                @include border(null, 1px, solid, $box-brd-color);
+                line-height: 1.25;
+                margin-left: -1px;
+                &:hover {
+                    border-color: $active-nav-color;
+                    background: $active-nav-color;
+                    color: $white-color;
+                }
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &.disabled {
+                cursor: default;
+                opacity: 0.5;
+                border: none;
+                &:hover {
+                    border: none;
+                }
+            }
+            &:hover {
+                border: none;
+                background: none;
+            }
+            &.active {
+                a {
+                    border-color: $active-nav-color;
+                    background: $active-nav-color;
+                    color: $white-color;
+                }
+            }
+            &.previous,
+            &.next {
+                a {
+                    position: relative;
+                    &:before {
+                        @include position(absolute, 0, 0, 0, 0, null);
+                        margin: auto;
+                        height: 15px;
+                        width: 15px;
+                        font-family: $material-font-family;
+                        text-indent: 0;
+                    }
+                }
+            }
+            &.previous {
+                a {
+                    &:before {
+                        content: "\F141";
+                    }
+                }
+            }
+            &.next {
+                a {
+                    &:before {
+                        content: "\F142";
+                    }
+                }
+            }
+        }
+    }
+    .dataTable {
+        margin: 10px 0 20px !important;
+        .btn{
+            @media only screen and (max-width:1024px) {
+                &:first-child{
+                    margin-bottom: 10px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        thead {
+            .sorting_asc,
+            .sorting {
+                background-image: none;
+                &:before,
+                &:after {
+                    @include position(absolute, 0, 0, 0, null, null);
+                    opacity: 0.5;
+                    margin: auto;
+                    height: 15px;
+                }
+                &:before {
+                    content: "\F05D";
+                    font-family: $material-font-family;
+                    right: 12px;
+                }
+                &:after {
+                    content: "\F045";
+                    font-family: $material-font-family;
+                }
+            }
+            .sorting_desc,
+            .sorting {
+                background-image: none;
+                &:before,
+                &:after {
+                    @include position(absolute, 0, 0, 0, null, null);
+                    opacity: 0.5;
+                    margin: auto;
+                    height: 15px;
+                }
+                &:before {
+                    content: "\F05D";
+                    font-family: $material-font-family;
+                    right: 16px;
+                }
+                &:after {
+                    content: "\F045";
+                    font-family: $material-font-family;
+                    right: 4px;
+                }
+            }
+            .sorting_asc {
+                &:before {
+                    opacity: 1;
+                }
+            }
+            .sorting_desc {
+                &:after {
+                    opacity: 1;
+                }
+            }
+            th,
+            td {
+                padding: 15px 20px;
+                position: relative;
+                vertical-align: middle;
+            }
+        }
+        tbody {
+            td {
+                padding: 15px 20px;
+            }
+        }
+        &.no-footer {
+            border-bottom: none;
+        }
+    }
+    
+}

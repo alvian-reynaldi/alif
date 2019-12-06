@@ -1,0 +1,273 @@
+.bootstrap-select {
+    width: 100% !important;
+    margin-bottom: 30px;
+    position: relative !important;
+}
+
+.select2-dropdown {
+    border: none;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.11);
+    background: $white-color;
+    border-radius: 3px;
+    padding: 10px 0;
+}
+
+.multiselect-all{
+    & > .checkbox{
+        padding: 7px 20px !important;
+    }
+}
+
+.multiselect-item{
+    .input-group{
+        & > .input-group-append{
+            & > .input-group-text{
+                padding: 0.56rem 0.375rem;
+            }
+        }
+    }
+}
+
+.multiselect-container {
+    &.dropdown-menu {
+        max-width: 250px;
+        .input-group {
+            margin: 5px 0 10px 0;
+            padding: 0 15px;
+            & > .input-group-prepend{
+                & > .input-group-text{
+                    padding: 5px;
+                }
+            }
+        }
+        .multiselect-clear-filter{
+            margin: 0;
+        }
+    }
+
+    & > li{
+        & > a{
+            & > label{
+                width: 100%;
+                padding: 7px 20px;
+            }
+        }
+    }
+}
+
+
+
+.demo-vertical-spacing {
+    &>*+* {
+        margin-top: 1.875rem !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.select2-container {
+    .select2-selection--single {
+        height: 35px;
+        border-color: $accordian-border-color;
+    }
+}
+
+.select2-container--default {
+    .select2-selection--multiple {
+        min-height: 35px;
+        border-color: $accordian-border-color;
+        @include border-radius(0.25rem);
+    }
+}
+
+.select2-container {
+    .select2-selection--single {
+        @include border-radius(0.25rem);
+        &:focus {
+            border-color: $form-control-focus-brd-color;
+            outline: none;
+        }
+    }
+}
+
+.select2-container--default {
+    .select2-selection--single {
+        .select2-selection__rendered {
+            line-height: 34px;
+            color: $form-control-color;
+        }
+        .select2-selection__arrow {
+            height: 34px;
+        }
+    }
+    .select2-results__options{
+        & > .select2-results__option {
+            padding: 9px 15px;
+            color: $base-color;
+        }
+    }
+}
+
+.select2-container--default {
+    &.select2-container--disabled {
+        .select2-selection--multiple {
+            background: $popover-brd-color;
+        }
+    }
+    .select2-selection--multiple {
+        .select2-selection__choice {
+            background-color: $accordian-border-color;
+            color: $form-control-color;
+            padding: 0 .5rem;
+            border: none;
+            border-radius: 0;
+        }
+        .select2-selection__choice__remove {
+            color: $form-control-color;
+        }
+    }
+    .select2-results__options{
+        & > .select2-results__option[aria-selected=true],
+        & > .select2-results__option:not([role = group]):hover {
+            background-color: $dropdown-hover-background;
+            color: $base-color;
+        }
+        & > .select2-results__option--highlighted[aria-selected] {
+            background-color: $dropdown-hover-background;
+            color: $base-color;
+            padding: 9px 15px;
+        }
+    }
+    .select2-search--dropdown {
+        .select2-search__field {
+            @include border(null, 1px, solid, $switcher-bg-color);
+        }
+    }
+    &.select2-container--focus {
+        .select2-selection--multiple {
+            border-color: $accordian-border-color;
+        }
+    }
+}
+
+@mixin select2-color($bgColor, $color: $white-color) {
+    .select2-container--default {
+        .select2-selection--multiple {
+            .select2-selection__choice {
+                background-color: theme-color($bgColor);
+                color: $color;
+            }
+            .select2-selection__choice__remove {
+                color: $color;
+            }
+        }
+    }
+}
+
+.select2-primary {
+    @include select2-color("primary");
+}
+
+.select2-secondary {
+    @include select2-color("secondary", $base-color);
+}
+
+.select2-success {
+    @include select2-color("success");
+}
+
+.select2-danger {
+    @include select2-color("danger");
+}
+
+.select2-info {
+    @include select2-color("info");
+}
+
+.select2-warning {
+    @include select2-color("warning");
+}
+
+.select2-dark {
+    @include select2-color("dark");
+}
+
+.is-valid {
+    .select2-container--default {
+        .select2-selection--multiple {
+            border-color: theme-color("success");
+        }
+    }
+    .select2-container {
+        .select2-selection--single {
+            border-color: theme-color("success");
+        }
+    }
+}
+
+.is-invalid {
+    .select2-container--default {
+        .select2-selection--multiple {
+            border-color: theme-color("danger");
+        }
+    }
+    .select2-container {
+        .select2-selection--single {
+            border-color: theme-color("danger");
+        }
+    }
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+    border-color: $accordian-border-color;
+    box-shadow: none;
+    color: $form-control-color;
+    @include border-radius(0.25rem);
+    padding: 6px;
+    .tag {
+        background-color: $accordian-border-color;
+        color: $form-control-color;
+        padding: 0.3rem .5rem;
+        @media only screen and (max-width:767px){
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        &.badge {
+            @include font-weight(400);
+            padding: 0.4rem 0.5rem !important;
+            font-size: 1rem;
+            border-radius: 0;
+            margin: 0;
+            @media only screen and (max-width:767px){
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+        }
+        @each $key,
+        $value in $theme-colors {
+            &.badge-#{$key} {
+                background-color: $value;
+                color: $white-color;
+            }
+        }
+        &.badge-secondary {
+            color: $base-color;
+        }
+    }
+}
+
+.is-valid {
+    .bootstrap-tagsinput {
+        border-color: theme-color("success");
+    }
+}
+
+.is-invalid {
+    .bootstrap-tagsinput {
+        border-color: theme-color("danger");
+    }
+}
+
+.selectpicker{
+    position: relative;
+}

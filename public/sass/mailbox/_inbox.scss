@@ -1,0 +1,180 @@
+.mailbox-container {
+    background-color: $white-color;
+}
+
+.manage-mail-list {
+    padding: 15px;
+    &>.compose-btn {
+        padding: 10px 15px;
+    }
+}
+
+.manage-list {
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        @include border-radius(4px);
+        &.active,
+        &:hover {
+            background-color: $mailbox-active-color;
+            a {
+                color: $active-nav-color;
+            }
+        }
+    }
+    a {
+        display: block;
+        color: $mailbox-link-color;
+        i {
+            margin-right: 8px;
+            font-size: px-rem($f14);
+        }
+    }
+}
+
+.inbox-wrapper {
+    padding-top: 15px;
+    @include border(left, 1px, solid, $popover-brd-color);
+    @include border(right, 1px, solid, $popover-brd-color);
+    .inbox-header {
+        .form-control {
+            border-color: $popover-brd-color;
+            padding: 0.25rem 0.75rem;
+            color: $mailbox-link-color;
+        }
+        @include border(bottom, 1px, solid, $popover-brd-color);
+    }
+    .inbox-content {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+}
+
+.inbox-content {
+    .mail-list {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        width: 100%;
+        @include border(bottom, 1px, solid, $popover-brd-color);
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.mail-list {
+    &.viewed_mail {
+        background-color: $mailbox-active-color;
+    }
+    .content {
+        overflow: hidden;
+        padding: 0 10px 0 5px;
+        width: calc(100% - 45px);
+        &>p {
+            margin-bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .message_text {
+        color: $mail-para-color;
+    }
+    .favorites {
+        &>.checked {
+            color: $warning-background-color;
+        }
+    }
+}
+
+.mailview-container {
+    padding: 0 10px;
+    display: block;
+}
+
+.sender-details {
+    padding: 20px 15px;
+    display: flex;
+    @include border(bottom, 1px, solid, $popover-brd-color);
+    &>img {
+        width: 43px;
+        height: 43px;
+    }
+    .details {
+        &>p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.message-content {
+    padding: 50px 15px;
+}
+
+.attachments-sections {
+    @include border(top, 1px, solid, $popover-brd-color);
+    padding: 30px 15px;
+    li {
+        padding: 10px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        @include border(null, 1px, solid, $popover-brd-color);
+        @include border-radius(5px);
+        display: inline-flex;
+        align-items: center;
+        i {
+            color: $attachment-icon-color;
+            font-size: px-rem($f30);
+        }
+    }
+    .thumb {
+        margin-right: 10px;
+    }
+    .details {
+        &>.file-name {
+            margin-bottom: 0;
+            line-height: 20px;
+            display: block;
+        }
+    }
+    .buttons {
+        display: flex;
+        &>* {
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.mail-compose-container {
+    background: $white-color;
+    color: $form-control-color;
+    padding: 15px;
+    .form-labels {
+        border: none;
+        display: flex;
+        align-items: center;
+        @include border(bottom, 1px, solid, $accordian-border-color);
+        &.subject {
+            .form-control {
+                padding-left: 0;
+            }
+        }
+        label {
+            line-height: 32px;
+            margin-bottom: 0;
+        }
+        .form-control {
+            border: none;
+        }
+    }
+    .from {
+        label {
+            margin-bottom: 0;
+        }
+    }
+}

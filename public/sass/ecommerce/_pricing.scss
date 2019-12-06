@@ -1,0 +1,26 @@
+.pricing-table{
+    .pricing-card {
+        .pricing-card-body {
+            padding: 50px 56px 43px;
+            @media only screen and (max-width:1024px){
+                padding: 30px 26px 30px;
+            }
+        }
+        .plan-features li {
+            text-align: left;
+            padding: 4px 0;
+            font-family: $base-font-family;
+            font-size: px-rem($f14);
+        }
+    }
+}
+.pricing-card-body {
+    .plan-features{
+        width: 100%;
+        margin-bottom: 30px;   
+        li {
+            text-align: left;
+            padding: 4px 0;
+        }
+    }
+}

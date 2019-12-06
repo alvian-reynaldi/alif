@@ -1,0 +1,254 @@
+@each $class in $border-classes{
+    .border-#{$class}{
+        @include border($class, 1px, solid, $popover-brd-color !important);
+    }
+}
+
+
+.margin-left-auto {
+    margin-left: auto !important;
+    ;
+}
+
+.margin-right-auto {
+    margin-right: auto !important;
+    ;
+}
+
+.margin-top-auto {
+    margin-top: auto !important;
+    ;
+}
+
+.margin-bottom-auto {
+    margin-bottom: auto !important;
+    ;
+}
+
+.margin-auto {
+    margin: auto !important;
+    ;
+}
+
+.no-padding {
+    padding: 0 !important
+}
+
+.no-border {
+    border: none !important
+}
+
+.no-border-t {
+    border-top: none !important
+}
+
+.no-border-l {
+    border-left: none !important
+}
+
+.no-border-r {
+    border-right: none !important
+}
+
+.no-border-b {
+    border-bottom: none !important
+}
+
+.c-h1{
+	font-size:px-rem($f30);
+}
+.c-h2{
+	font-size:px-rem($f24);
+}
+.c-h3{
+	font-size:px-rem($f18);
+}
+.c-h4{
+	font-size:px-rem($f16);
+}
+.c-h5{
+	font-size:px-rem($f14);
+}
+
+.c-h6{
+	font-size:px-rem($f13);
+}
+
+.hide{@include hide-element;}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.text-gray{
+    color: $grey-text !important;
+}
+
+.bg-light{
+    background: $light-background-inverse-color !important;
+}
+.max-width {
+    max-width: 100% !important;
+}
+
+.bg-grey {
+    background: $main-background !important;
+}
+
+.bg-white {
+    background: $white-color !important;
+}
+
+.color-grey {
+    color: $base-color !important;
+}
+
+.color-dark-grey {
+    color: $heading-color !important;
+}
+
+.color-grey-600 {
+    color: $base-color !important;
+    @include font-weight(600 !important);
+}
+
+.color-light-dark-grey {
+    color: $light-dark-grey !important;
+}
+
+@each $class in $border-classes{
+    .border-#{$class}{
+        @include border($class, 1px, solid, $popover-brd-color !important);
+    }
+}
+
+@each $weights in $font-weight-classes{
+    .font-weight-#{$weights}{
+        @include font-weight($weights !important);
+    }
+}
+
+@each $key, $value in $theme-colors{
+    .bg-#{$key}{
+        background-color: $value !important;
+    }
+    .text-#{$key} {
+        color: $value !important;
+    }
+}
+
+.text-black{
+    color: $black-color;
+}
+
+.text-small{
+    font-size: px-rem($f12);
+}
+
+.unstyle {
+    list-style: none;
+}
+
+.unorder {
+    list-style: disc;
+}
+
+.dotted-border {
+    border-style: dotted;
+}
+
+.rounded-border {
+    border-radius: 50px;
+}
+.mr-auto,.mx-auto{
+    margin-right:auto !important;
+}
+.ml-auto,.mx-auto{
+    margin-left:auto !important;
+}
+.mt-auto,.my-auto{
+    margin-top:auto !important;
+}
+.mb-auto,.my-auto{
+    margin-bottom:auto !important;
+}
+.md-16 {
+    font-size: px-rem($f16);
+}
+
+.md-18 {
+    font-size: px-rem($f18);
+}
+
+.md-24 {
+    font-size: px-rem($f24);
+}
+
+.md-36 {
+    font-size: px-rem($f36);
+}
+
+.md-48 {
+    font-size: px-rem($f48);
+}
+
+.lh-1{
+    line-height: 0.5rem;
+}
+
+.lh-2{
+    line-height: 1rem;
+}
+
+.lh-3{
+    line-height: 1.5rem;
+}
+
+.lh-4{
+    line-height: 2rem;
+}
+
+.lh-5{
+    line-height: 2.5rem;
+}
+
+.lh-6{
+    line-height: 3rem;
+}
+
+.badge {
+    @include font-weight(400);
+}
+
+.img-sm{
+    width: 45px;
+    height: 45px;
+}
+
+.height-auto{
+    height: auto!important;
+}
+.text-facebook{
+    color: $fb-background;
+}
+.text-twitter{
+    color: $tw-background;
+}
+.text-linkedin{
+    color: $ln-background;
+}
+.text-dribble{
+    color: $dribble-background;
+}
+.text-gplus{
+    color: $gplus-background;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+
+.mbr-xl-2{
+    @media only screen and (max-width: 579px){
+        margin-bottom: 1rem;
+    }
+}

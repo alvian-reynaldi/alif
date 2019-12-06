@@ -1,0 +1,95 @@
+.documentation-wrapper {
+    padding: 0 2.1rem;
+    .doc-header {
+        padding: 24px 2.1rem;
+        @include position(fixed, 0, 0, null, 0, 999);
+        background: $main-background;
+        @media only screen and (max-width:767px){
+            position: static;
+        }
+        a {
+            color: $base-color;
+            @include font-weight(600);
+            i {
+                vertical-align: top;
+            }
+        }
+    }
+    .doc-content {
+        padding-top: 140px;
+        @media only screen and (max-width:767px){
+            padding-top: 0;
+        }
+    }
+    .doc-table-contents {
+        overflow: auto;
+        @include position(fixed, 140px, 0, 0, calc(2.1rem - 15px), 1);
+        @media only screen and (max-width:1199px){
+            display: none;
+        }
+    }
+    .list-arrow {
+        li {
+            &:before {
+                color: theme-color('info');
+            }
+        }
+    }
+}
+
+.filled-tabs-2 {
+    .nav-item {
+        margin-bottom: 0;
+        &:first-child {
+            a {
+                border-radius: 5px 0 0 0
+            }
+        }
+        &:last-child {
+            a {
+                border-right: 1px solid #269bff;
+                border-radius: 0 5px 0 0;
+            }
+        }
+        &.show {
+            .nav-link {
+                background: theme-color("primary");
+                color: $white-color;
+                border-color: theme-color("primary");
+            }
+        }
+    }
+    .nav-link {
+        @include border(null, 1px, solid, $active-nav-color);
+        color: theme-color("primary");
+        border-bottom: none;
+        border-right: none;
+        padding: 0.3em 1.3em;
+        margin-right: 0;
+        @include font-weight(600);
+        font-size: 14px;
+        border-radius: 0;
+        &:hover,
+        &:focus {
+            color: theme-color("primary");
+            @include border(null, 1px, solid, $active-nav-color);
+            border-bottom: none;
+            border-right: none;
+        }
+        &.active {
+            background: theme-color("primary");
+            color: $white-color;
+            border-color: $active-nav-color;
+        }
+    }
+}
+.filled-tabs-content{
+    &.tab-content {
+        @include border(null, 1px, solid, $active-nav-color);
+        border-radius: 0 5px 5px 5px;
+        overflow: hidden;
+        background: $light-background-inverse-color;
+        margin-bottom: 45px;
+        padding: 1.5rem 1rem;
+    }
+}

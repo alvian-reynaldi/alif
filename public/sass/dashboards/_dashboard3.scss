@@ -1,0 +1,201 @@
+#ct-visits {
+    position: relative;
+    height: 250px;
+}
+
+.chartist-tooltip {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    min-width: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: $base-color;
+    color: $white-color;
+    @include font-weight(500);
+    @include text-align(center);
+    pointer-events: none;
+    z-index: 1;
+    @include transition(opacity, 0.2s);
+    &.tooltip-show {
+        opacity: 1;
+    }
+}
+
+#ct-daily-sales {
+    height: 250px;
+    background: theme-color('danger');
+    position: relative;
+    .ct-chart-bar {
+        height: 300px !important
+    }
+    .ct-series-a {
+        .ct-bar {
+            opacity: 0.7;
+            stroke: $white-color;
+        }
+    }
+}
+
+#ct-weather {
+    .ct-area {
+        fill: none;
+    }
+    .ct-line {
+        animation: dasharray-craziness 2s infinite;
+        stroke: $white-color;
+    }
+    .ct-grid {
+        stroke: #d9d9d9;
+        stroke-dasharray: 0;
+        stroke-opacity: 0.4;
+    }
+    .ct-series-a {
+        .ct-bar {
+            opacity: 0.7;
+            stroke: $white-color;
+        }
+    }
+}
+
+#morris-area-chart2 {
+    max-height: 110px;
+    overflow: hidden;
+    text {
+        display: none
+    }
+}
+
+.wallet-list {
+    li {
+        padding: 15px 0;
+        @include border(bottom, 1px, solid, $popover-brd-color);
+        display: flex;
+        i {
+            margin-right: 1rem;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.table.manage-u-table {
+    margin-bottom: 0;
+    tr {
+        td,
+        th {
+            padding: 1rem 0.75rem;
+        }
+    }
+}
+
+#calender {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.fc-toolbar{
+    &.fc-header-toolbar{
+        background: theme-color('primary');
+        padding: 1.5rem;
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    @media only screen and (max-width:576px){
+        .fc-right{
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+}
+.fc-view-container{
+    .fc-head{
+        .fc-head-container{
+            border: none;
+        }
+        .fc-day-header{
+            border: none;
+            padding: 5px 8px;
+            background: theme-color('primary');
+            color: $white-color;
+        }
+    }
+    
+    .fc-body{
+        background: $white-color;
+        border-color: $popover-brd-color;
+        .fc-widget-content{
+            border-color: $popover-brd-color;
+            background: none;
+            @include text-align(center);
+            .fc-day-top{
+                .fc-day-number{
+                    display: inline-block;
+                    float: none;
+                }
+            }
+        }
+        
+    }
+   
+    .fc-event{
+        background: theme-color('primary');
+        color: $white-color;
+        padding: 8px;
+        border-radius: 0;
+        border: none;
+        &:not([href]){
+            color: $white-color;
+        }
+        &:hover{
+            background: $primary-card-brd-color;
+            color: $white-color;
+            &:not([href]){
+                background: $primary-card-brd-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+.fc{
+    .fc-button-group{
+        & > *{
+            background: theme-color('primary');
+            color: $white-color;
+            box-shadow: none;
+            border: none;
+            text-shadow: none;
+            @include border(null,1px,solid,$white-color);
+            &:hover{
+                color: theme-color('primary');
+                background: $white-color;
+                box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+            }        
+        }
+    }
+}
+@-webkit-keyframes dasharray-craziness {
+    0% {
+        stroke-dasharray: 5px
+    }
+    50% {
+        stroke-dasharray: 6px
+    }
+    to {
+        stroke-dasharray: 7px
+    }
+}
+
+@keyframes dasharray-craziness {
+    0% {
+        stroke-dasharray: 5px
+    }
+    50% {
+        stroke-dasharray: 6px
+    }
+    to {
+        stroke-dasharray: 7px
+    }
+}

@@ -1,0 +1,109 @@
+.login-container {
+   min-height: 100vh;
+   .login-inner-container{
+       display: flex;
+       align-items: center;
+       flex-wrap: wrap;
+       .left-content, .right-content{
+           flex:1;
+           @media only screen and (max-width: 767px){
+               width: 100%;
+               flex: auto;
+           }
+       }
+   }
+}
+
+.login-content {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 37.7px 11.3px rgba(8, 143, 220, 0.07);
+    background: $active-nav-color;
+    @media only screen and (max-width:767px) {
+        max-width: 100%;
+    }
+    .form-content {
+        padding: 25px;
+        background: $white-color;
+        h3 {
+            @include text-transform(uppercase);
+            font-size: px-rem($f16);
+            @include font-weight(500);
+            margin-bottom: 25px;
+            @include text-align(center);
+        }
+        a {
+            text-decoration: underline;
+            line-height: 24px;
+            &:hover {
+                color: $active-nav-color;
+            }
+        }
+        .btn {
+            margin-bottom: 5px;
+        }
+    }
+    fieldset {
+        position: relative;
+        .form-control {
+            padding-left: 43px;
+        }
+    }
+    .icon {
+        @include position(absolute, 0, null, 0, 0, null);
+        min-width: 34px;
+        margin: auto 0;
+        height: 24px;
+        @include border(right, 1px, solid, rgba(0, 0, 0, .14));
+        padding: 0 10px;
+        line-height: 24px;
+    }
+    .forgot-password {
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+        .remember {
+            float: left;
+        }
+        .forgot-link {
+            float: right;
+        }
+    }
+    .third-party-login {
+        background: $white-color;
+        padding: 20px;
+        .google-login {
+            a {
+                position: relative;
+                background: $gplus-background;
+                color: $white-color;
+                display: block;
+                line-height: 34px;
+                padding-left: 45px;
+                border-radius: .25rem;
+                &:before {
+                    @include position(absolute, 0, 0, 0, 0, null);
+                    font-family: $material-font-family;
+                    content: "\f2ad";
+                    margin: auto 0;
+                    width: 32px;
+                    height: 20px;
+                    line-height: 24px;
+                    @include text-align(center);
+                    @include border(right, 1px, solid, $white-color);
+                }
+                &:hover {
+                    background: $gplus-hvr-background;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width:767px){
+        .left-content{
+            padding: 150px 0;
+        }
+    }
+}
+
+

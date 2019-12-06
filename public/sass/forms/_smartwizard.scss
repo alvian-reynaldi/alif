@@ -1,0 +1,99 @@
+.sw-theme-default {
+    box-shadow: none;
+    &>ul.step-anchor {
+        &>li {
+            display: flex;
+            flex-grow: 1;
+            &.active{
+                &>a {
+                    cursor: pointer;
+                    opacity: 1;
+                    color: $base-color !important;
+                    &:after{
+                        display: none;
+                    }
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.done{
+                & > a{
+                    opacity: 1;
+                    color: $base-color !important;
+                    &:after{
+                        display: none;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            &>a {
+                position: relative;
+                padding-left: 60px;
+                cursor: default;
+                opacity: 0.3;
+                color: $base-color !important;
+                &:hover{
+                    cursor: default;
+                }
+            }
+        }
+    }
+    .sw-number {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        @include border(null, 2px, solid, $switcher-bg-color);
+        line-height: 38px;
+        @include border-radius(100%);
+        @include position(absolute, 0, null, 0, 0);
+        margin: auto;
+        i{
+            display: inline-block;
+            @include transform(translateY(-2px));
+        }
+    }
+    .active{
+        .sw-number{
+            border-color: theme-color("primary");
+            color: theme-color("primary");
+        }
+    }
+    .done{
+        .sw-number{
+            border-color: theme-color("success");
+            color: theme-color("success");
+        }
+    }
+    .nav-tabs{
+        border-bottom: none;
+    }
+    .sw-toolbar{
+        background: none;
+        padding: 10px 0;
+    }
+    .step-content{
+        box-shadow: none;
+        padding: 0;
+    }
+    .tab-content{
+        min-height: initial;
+        .card-body{
+            @include border(null, 1px, solid, $popover-brd-color);
+            min-height: 100px;
+        }
+    }
+    &.smartwizard-vertical{
+        display: flex;
+        .nav-tabs{
+            display: flex;
+            flex-direction: column;
+            padding-right: 10px;
+        }
+        .tab-content{
+            flex: 1;
+        }
+    }
+}
